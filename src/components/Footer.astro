@@ -1,0 +1,91 @@
+---
+// Footer Component
+---
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONAIGEO 2025</h3>
+                <p>Congreso Dx</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/actividades">Actividades</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@conaigeo2025.org</p>
+                <p>Teléfono: (01) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CONAIGEO. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: #1a202c;
+        color: white;
+        padding: 3rem 0 1rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section a {
+        color: #cbd5e0;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+        color: white;
+    }
+
+    .footer-section p {
+        color: #cbd5e0;
+        line-height: 1.6;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #2d3748;
+        padding-top: 1rem;
+        text-align: center;
+        color: #cbd5e0;
+    }
+</style>
