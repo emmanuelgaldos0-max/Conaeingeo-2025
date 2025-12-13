@@ -2,29 +2,411 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contacto - CONAIGEO 2025">
-    <div class="page-content">
-        <h1>Contacto</h1>
-        <p>Contenido de la página Contacto</p>
-    </div>
+<Layout title="Contacto - CONAIGEO 2026">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h2>Envíanos un mensaje</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Completa el formulario y nos pondremos en contacto
+                        contigo a la brevedad.
+                    </p>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Tu nombre"
+                            />
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="tu@email.com"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+51 999 999 999"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="inscripcion">Inscripción</option>
+                                <option value="patrocinio">Patrocinio</option>
+                                <option value="ponente">Ser ponente</option>
+                                <option value="informacion"
+                                    >Información general</option
+                                >
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                                placeholder="Escribe tu mensaje aquí..."
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <h2>Información de contacto</h2>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris.
+                    </p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>Universidad Nacional de San Agustín</p>
+                                <p>Av. Independencia s/n</p>
+                                <p>Arequipa, Perú</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <p>+51 54 123456</p>
+                                <p>+51 999 888 777</p>
+                                <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>contacto@conaigeo2026.com</p>
+                                <p>info@conaigeo2026.com</p>
+                                <p>Respuesta en 24-48 horas</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Redes Sociales</h3>
+                                <div class="social-links">
+                                    <a href="#" aria-label="Facebook"
+                                        ><i class="fab fa-facebook"></i></a
+                                    >
+                                    <a href="#" aria-label="Instagram"
+                                        ><i class="fab fa-instagram"></i></a
+                                    >
+                                    <a href="#" aria-label="Twitter"
+                                        ><i class="fab fa-twitter"></i></a
+                                    >
+                                    <a href="#" aria-label="LinkedIn"
+                                        ><i class="fab fa-linkedin"></i></a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <h3>Comité Organizador</h3>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <strong>Dr. Juan Pérez</strong>
+                                <span>Presidente del Comité</span>
+                            </div>
+                            <div class="team-member">
+                                <strong>Dra. María García</strong>
+                                <span>Coordinadora Académica</span>
+                            </div>
+                            <div class="team-member">
+                                <strong>Ing. Carlos López</strong>
+                                <span>Coordinador Logístico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
 
 <style>
-    .page-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+    .page-header {
+        background: var(--gradient-hero);
+        color: var(--color-white);
+        padding: 8rem 0 4rem;
+        text-align: center;
+        margin-top: 80px;
     }
 
-    h1 {
-        font-size: 2.5rem;
-        color: #2d3748;
+    .page-header h1 {
+        color: var(--color-white);
         margin-bottom: 1rem;
     }
 
-    p {
-        font-size: 1.1rem;
-        color: #4a5568;
-        line-height: 1.6;
+    .page-header p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 4rem;
+        margin-top: 3rem;
+    }
+
+    .contact-form-wrapper h2,
+    .contact-info-wrapper h2 {
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+    }
+
+    .contact-form-wrapper > p,
+    .contact-info-wrapper > p {
+        color: var(--color-text-light);
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        background: var(--color-white);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--color-dark);
+        font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        border: 2px solid var(--color-light);
+        border-radius: var(--radius-md);
+        font-size: 1rem;
+        font-family: var(--font-body);
+        transition: all var(--transition-fast);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+        padding: 1.125rem;
+        font-size: 1.125rem;
+        margin-top: 1rem;
+    }
+
+    .contact-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: var(--color-white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        transition: all var(--transition-normal);
+    }
+
+    .contact-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateX(5px);
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .contact-details h3 {
+        color: var(--color-dark);
+        margin-bottom: 0.75rem;
+        font-size: 1.125rem;
+    }
+
+    .contact-details p {
+        color: var(--color-text-light);
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-details .social-links {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+    }
+
+    .contact-details .social-links a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: rgba(217, 119, 6, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary);
+        transition: all var(--transition-fast);
+    }
+
+    .contact-details .social-links a:hover {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        transform: translateY(-3px);
+    }
+
+    .team-section {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: var(--color-light);
+        border-radius: var(--radius-lg);
+    }
+
+    .team-section h3 {
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+    }
+
+    .team-section > p {
+        color: var(--color-text-light);
+        margin-bottom: 1.5rem;
+    }
+
+    .team-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: var(--color-white);
+        border-radius: var(--radius-md);
+        border-left: 3px solid var(--color-primary);
+    }
+
+    .team-member strong {
+        color: var(--color-dark);
+        font-size: 1.05rem;
+    }
+
+    .team-member span {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 1024px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page-header {
+            padding: 6rem 0 3rem;
+        }
     }
 </style>
