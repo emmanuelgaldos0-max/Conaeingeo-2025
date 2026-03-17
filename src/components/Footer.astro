@@ -1,0 +1,253 @@
+---
+// Footer Component
+---
+
+<footer>
+    <div class="footer-content">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>CONAIGEO 2026</span>
+                    </div>
+                    <p class="footer-desc">
+                        Congreso Internacional de Minería - Innovación y
+                        Desarrollo en la Industria Minera
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"
+                            ><i class="fab fa-facebook"></i></a
+                        >
+                        <a href="#" aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i></a
+                        >
+                        <a href="#" aria-label="Twitter"
+                            ><i class="fab fa-twitter"></i></a
+                        >
+                        <a href="#" aria-label="LinkedIn"
+                            ><i class="fab fa-linkedin"></i></a
+                        >
+                        <a href="#" aria-label="YouTube"
+                            ><i class="fab fa-youtube"></i></a
+                        >
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="#acerca">Acerca del Congreso</a></li>
+                        <li>
+                            <a href="/actividades">Calendario de Actividades</a>
+                        </li>
+                        <li><a href="#ponentes">Ponentes</a></li>
+                        <li><a href="#organizadores">Organizadores</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="/inscripciones">Inscripciones</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Políticas y Términos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span
+                                >UNSA, Av. Independencia s/n<br />Arequipa, Perú</span
+                            >
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+51 54 123456</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contacto@conaigeo2026.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 CONAIGEO. Todos los derechos reservados.</p>
+                <p>Desarrollado para el Congreso Internacional de Minería</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    .footer-content {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .footer-col h4 {
+        color: var(--color-white);
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.75rem;
+    }
+
+    .footer-col h4::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--gradient-primary);
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--color-white);
+    }
+
+    .footer-logo i {
+        font-size: 1.75rem;
+        color: var(--color-primary-light);
+    }
+
+    .footer-desc {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        font-size: 1rem;
+        transition: all var(--transition-normal);
+    }
+
+    .social-links a:hover {
+        background: var(--gradient-primary);
+        transform: translateY(-3px);
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all var(--transition-fast);
+        display: inline-block;
+    }
+
+    .footer-col ul li a:hover {
+        color: var(--color-primary-light);
+        transform: translateX(5px);
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+    }
+
+    .contact-item i {
+        color: var(--color-primary-light);
+        font-size: 1.125rem;
+        margin-top: 0.25rem;
+    }
+
+    .footer-bottom {
+        padding: var(--spacing-md) 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-bottom-content p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>

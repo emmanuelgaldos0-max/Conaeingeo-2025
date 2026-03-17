@@ -1,0 +1,303 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Congreso CONAIGEO Arequipa 2026 - Evento de contexto minero en la UNSA"
+        />
+        <title>{title}</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        /* Professional Corporate Color Palette */
+        --color-primary: #1e3a8a; /* Professional Deep Blue */
+        --color-primary-dark: #1e40af;
+        --color-primary-light: #3b82f6;
+
+        --color-secondary: #f97316; /* Corporate Orange */
+        --color-secondary-dark: #ea580c;
+        --color-secondary-light: #fb923c;
+
+        --color-accent: #0891b2; /* Professional Teal */
+        --color-accent-dark: #00c8ff;
+        --color-accent-light: #22d3ee;
+
+        --color-metallic: #71717a; /* Professional Gray */
+        --color-gold: #f59e0b;
+        --color-copper: #c2410c;
+
+        /* Neutral Colors */
+        --color-dark: #1f2937;
+        --color-text: #374151;
+        --color-text-light: #6b7280;
+        --color-light: #f3f4f6;
+        --color-lighter: #f9fafb;
+        --color-white: #ffffff;
+
+        /* Professional Gradients - Subtle */
+        --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        --gradient-secondary: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+        --gradient-hero: linear-gradient(
+            135deg,
+            rgba(30, 58, 138, 0.92) 0%,
+            rgba(31, 41, 55, 0.88) 100%
+        );
+        --gradient-overlay: linear-gradient(
+            to bottom,
+            rgba(31, 41, 55, 0.75),
+            rgba(30, 58, 138, 0.35)
+        );
+
+        /* Typography - Traditional Professional */
+        --font-body: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        --font-heading: "Roboto", "Arial", sans-serif;
+
+        /* Spacing */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 2rem;
+        --spacing-lg: 4rem;
+        --spacing-xl: 6rem;
+
+        /* Border Radius */
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 1rem;
+        --radius-full: 9999px;
+
+        /* Shadows - Professional Subtle */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+        --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+        --shadow-xl: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
+
+        /* Transitions */
+        --transition-fast: 150ms ease-in-out;
+        --transition-normal: 300ms ease-in-out;
+        --transition-slow: 500ms ease-in-out;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: var(--font-body);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-lighter);
+        color: var(--color-text);
+        line-height: 1.7;
+        overflow-x: hidden;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--color-dark);
+    }
+
+    h1 {
+        font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-text-light);
+    }
+
+    /* Utility Classes */
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-title h2 {
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-primary);
+    }
+
+    .section-title p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        font-family: var(--font-heading);
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: var(--radius-full);
+        transition: all var(--transition-normal);
+        cursor: pointer;
+        border: none;
+        text-align: center;
+    }
+
+    .btn-primary {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--color-white);
+        border: 2px solid var(--color-white);
+    }
+
+    .btn-secondary:hover {
+        background: var(--color-white);
+        color: var(--color-primary);
+    }
+
+    /* Cards */
+    .card {
+        background: var(--color-white);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
+        transition: all var(--transition-normal);
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    /* Glassmorphism */
+    .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .fade-in-up {
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+        }
+    }
+</style>

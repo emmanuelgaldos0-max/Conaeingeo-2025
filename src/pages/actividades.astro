@@ -1,0 +1,920 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Actividades - CONAIGEO 2026">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Calendario de Actividades</h1>
+            <p>Programa completo del congreso - 15 al 18 de Septiembre 2026</p>
+        </div>
+    </section>
+
+
+    <!-- FILTERS -->
+    <div class="activity-filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="magistrales">Ponencias Magistrales</button>
+        <button class="filter-btn" data-filter="concursos">Concursos</button>
+        <button class="filter-btn" data-filter="workshops">Workshops</button>
+        <button class="filter-btn" data-filter="tecnica">Visitas Tecnicas</button>
+        <button class="filter-btn" data-filter="campo">Salidas de campo</button>
+    </div>
+
+
+
+    <!-- Schedule Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Day 1 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 1</span>
+                        <span class="day-date">15 de Septiembre</span>
+                    </div>
+                    <h2>Inauguración y Conferencias Magistrales</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>08:00 - 09:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Registro y Acreditación</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Hall Principal,
+                                UNSA
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Los participantes recibirán sus
+                                credenciales y material del congreso. Sed do
+                                eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 10:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Ceremonia de Inauguración</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Autoridades UNSA y Comité
+                                Organizador
+                            </p>
+                            <p>
+                                Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris. Palabras de
+                                bienvenida por el Rector de la UNSA y
+                                presentación oficial del congreso. Duis aute
+                                irure dolor in reprehenderit in voluptate velit
+                                esse cillum dolore.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight" data-category="magistrales">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 - 11:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Conferencia Magistral: Estado Actual de la
+                                Minería en Perú
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Dr. Carlos Mendoza - Ingeniero
+                                de Minas Senior
+                            </p>
+                            <p>
+                                Excepteur sint occaecat cupidatat non proident,
+                                sunt in culpa qui officia deserunt mollit.
+                                Análisis profundo del panorama minero actual,
+                                desafíos y oportunidades del sector. Anim id est
+                                laborum sed ut perspiciatis unde omnis iste
+                                natus error.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time" >
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 12:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Coffee Break</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área de Networking
+                            </p>
+                            <p>
+                                Momento para networking y refrigerio. Sed ut
+                                perspiciatis unde omnis iste natus error sit
+                                voluptatem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="workshops">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>12:00 - 13:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Panel: Desafíos de la Industria Minera Moderna
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-users"></i> Panel de 5 expertos nacionales
+                                e internacionales
+                            </p>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit
+                                aspernatur aut odit aut fugit. Discusión sobre
+                                sostenibilidad, tecnología, regulaciones y el
+                                futuro de la minería. Sed quia consequuntur
+                                magni dolores eos qui ratione voluptatem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>13:30 - 15:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Almuerzo</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>15:00 - 17:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Sesiones Paralelas - Track A y B</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Salas A y B
+                            </p>
+                            <p>
+                                <strong>Track A:</strong> Neque porro quisquam est,
+                                qui dolorem ipsum quia dolor sit amet. Presentaciones
+                                de casos de éxito en proyectos mineros.<br />
+                                <strong>Track B:</strong> At vero eos et accusamus
+                                et iusto odio dignissimos. Innovaciones tecnológicas
+                                en exploración mineral.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 2</span>
+                        <span class="day-date">16 de Septiembre</span>
+                    </div>
+                    <h2>Innovación Tecnológica y Talleres</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 11:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Taller: Automatización en Minería Subterránea
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Laboratorio
+                                de Tecnología
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Ing. Roberto Silva - Especialista
+                                en Automatización
+                            </p>
+                            <p>
+                                Similique sunt in culpa qui officia deserunt
+                                mollitia animi. Taller práctico sobre sistemas
+                                automatizados en minería. Id est laborum et
+                                dolorum fuga et harum quidem rerum facilis est
+                                et expedita distinctio.
+                            </p>
+                            <p class="session-note">
+                                <i class="fas fa-info-circle"></i> Cupos limitados
+                                - Requiere inscripción previa
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:00 - 11:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Coffee Break</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área de Networking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 13:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Conferencia: Inteligencia Artificial en
+                                Exploración Mineral
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Dra. María Torres - Geóloga
+                                Especialista
+                            </p>
+                            <p>
+                                Nam libero tempore, cum soluta nobis est
+                                eligendi optio cumque nihil impedit.
+                                Aplicaciones de IA y machine learning en la
+                                exploración geológica. Quo minus id quod maxime
+                                placeat facere possimus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>13:00 - 14:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Almuerzo</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>14:30 - 16:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Showcase: Nuevas Tecnologías de Procesamiento
+                                Mineral
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Exposiciones
+                            </p>
+                            <p>
+                                Temporibus autem quibusdam et aut officiis
+                                debitis aut rerum necessitatibus. Empresas
+                                líderes presentan sus últimas innovaciones en
+                                procesamiento. Saepe eveniet ut et voluptates
+                                repudiandae sint et molestiae non recusandae.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>16:30 - 18:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Mesa Redonda: Transformación Digital en Minería
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Conferencias
+                            </p>
+                            <p>
+                                Itaque earum rerum hic tenetur a sapiente
+                                delectus. Debate abierto sobre la digitalización
+                                del sector minero y sus implicaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 3</span>
+                        <span class="day-date">17 de Septiembre</span>
+                    </div>
+                    <h2>Sostenibilidad y Responsabilidad Ambiental</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 11:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Panel: Minería Verde y Economía Circular</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-users"></i> Panel de expertos en
+                                sostenibilidad
+                            </p>
+                            <p>
+                                Ut aut reiciendis voluptatibus maiores alias
+                                consequatur aut perferendis doloribus. Discusión
+                                sobre prácticas sostenibles y economía circular
+                                en minería. Asperiores repellat sed ut
+                                perspiciatis unde omnis iste natus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:00 - 11:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Coffee Break</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área de Networking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 13:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Taller: Gestión de Recursos Hídricos en Minería
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Talleres
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Ing. Ana Martínez - Especialista
+                                Ambiental
+                            </p>
+                            <p>
+                                Error sit voluptatem accusantium doloremque
+                                laudantium totam rem aperiam. Mejores prácticas
+                                en gestión y conservación del agua. Eaque ipsa
+                                quae ab illo inventore veritatis et quasi
+                                architecto.
+                            </p>
+                            <p class="session-note">
+                                <i class="fas fa-info-circle"></i> Incluye material
+                                de trabajo
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>13:30 - 15:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Almuerzo</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>15:00 - 17:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>
+                                Conferencia: Relaciones Comunitarias y Licencia
+                                Social
+                            </h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p class="session-speaker">
+                                <i class="fas fa-user"></i> Dr. Luis Fernández - Experto
+                                en Responsabilidad Social
+                            </p>
+                            <p>
+                                Beatae vitae dicta sunt explicabo nemo enim
+                                ipsam voluptatem. Estrategias exitosas para
+                                construir relaciones positivas con comunidades.
+                                Quia voluptas sit aspernatur aut odit aut fugit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>17:00 - 18:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Sesión de Posters</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Hall de Exposiciones
+                            </p>
+                            <p>
+                                Sed quia consequuntur magni dolores eos qui
+                                ratione voluptatem sequi nesciunt. Presentación
+                                de investigaciones y proyectos estudiantiles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 4</span>
+                        <span class="day-date">18 de Septiembre</span>
+                    </div>
+                    <h2>Networking y Clausura</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 11:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Presentación de Casos de Éxito</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p>
+                                Neque porro quisquam est qui dolorem ipsum quia
+                                dolor sit amet consectetur. Empresas mineras
+                                comparten sus historias de éxito y lecciones
+                                aprendidas. Adipisci velit sed quia non numquam
+                                eius modi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:00 - 11:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Coffee Break</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área de Networking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 13:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Sesión de Networking Empresarial</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Networking
+                            </p>
+                            <p>
+                                Tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem. Oportunidad única
+                                para establecer contactos profesionales y
+                                explorar colaboraciones. Ut enim ad minima
+                                veniam quis nostrum exercitationem.
+                            </p>
+                            <p class="session-note">
+                                <i class="fas fa-info-circle"></i> Incluye almuerzo
+                                de networking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>13:00 - 14:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Almuerzo de Networking</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Salón de Eventos
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>15:00 - 16:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Ceremonia de Clausura</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p>
+                                Ullam corporis suscipit laboriosam nisi ut
+                                aliquid ex ea commodi consequatur. Palabras de
+                                cierre, reconocimientos y entrega de
+                                certificados de participación. Quis autem vel
+                                eum iure reprehenderit qui in ea voluptate.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>16:30 - 17:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Brindis de Despedida</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área Social
+                            </p>
+                            <p>
+                                Velit esse quam nihil molestiae consequatur vel
+                                illum. Despedida informal con los participantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download CTA -->
+            <div class="download-cta">
+                <div class="card">
+                    <h2>Descarga el Programa Completo</h2>
+                    <p>
+                        Obtén el programa detallado en PDF con toda la
+                        información de ponentes, talleres y actividades.
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Descargar Programa PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: var(--gradient-hero);
+        color: var(--color-white);
+        padding: 8rem 0 4rem;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .page-header h1 {
+        color: var(--color-white);
+        margin-bottom: 1rem;
+    }
+
+    .page-header p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .day-schedule {
+        margin-bottom: 4rem;
+    }
+
+    .day-header {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid var(--color-primary);
+    }
+
+    .day-badge {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        padding: 1.5rem 2rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        min-width: 180px;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .day-number {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 900;
+        font-family: var(--font-heading);
+    }
+
+    .day-date {
+        display: block;
+        font-size: 0.95rem;
+        opacity: 0.95;
+        margin-top: 0.25rem;
+    }
+
+    .day-header h2 {
+        color: var(--color-dark);
+        margin: 0;
+    }
+
+    .sessions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .session-card {
+        background: var(--color-white);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        gap: 2rem;
+        transition: all var(--transition-normal);
+        border-left: 4px solid transparent;
+    }
+
+    .session-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateX(5px);
+        border-left-color: var(--color-primary);
+    }
+
+    .session-card.highlight {
+        border-left-color: var(--color-primary);
+        background: linear-gradient(
+            to right,
+            rgba(217, 119, 6, 0.05),
+            var(--color-white)
+        );
+    }
+
+    .session-time {
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        font-family: var(--font-heading);
+        font-size: 1.125rem;
+    }
+
+    .session-time i {
+        font-size: 1.25rem;
+    }
+
+    .session-content h3 {
+        color: var(--color-dark);
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+    }
+
+    .session-content p {
+        margin-bottom: 0.75rem;
+    }
+
+    .session-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .session-location,
+    .session-speaker,
+    .session-note {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        color: var(--color-text-light);
+    }
+
+    .session-location {
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+
+    .session-speaker {
+        color: var(--color-secondary);
+        font-weight: 600;
+    }
+
+    .session-note {
+        background: var(--color-light);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-md);
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-top: 0.75rem;
+    }
+
+    .download-cta {
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .download-cta .card {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        padding: 3rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .download-cta h2 {
+        color: var(--color-white);
+        margin-bottom: 1rem;
+    }
+
+    .download-cta p {
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 2rem;
+        font-size: 1.125rem;
+    }
+
+    .download-cta .btn {
+        background: var(--color-white);
+        color: var(--color-primary);
+        padding: 1.25rem 3rem;
+        font-size: 1.125rem;
+    }
+
+    .download-cta .btn:hover {
+        background: var(--color-light);
+        transform: translateY(-2px);
+    }
+
+    .download-cta .btn i {
+        margin-right: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+        .page-header {
+            padding: 6rem 0 3rem;
+        }
+
+        .day-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .day-badge {
+            width: 100%;
+        }
+
+        .session-card {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .session-time {
+            min-width: auto;
+        }
+    }
+</style>
+
+
+</Layout>
+
+<script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const sessions = document.querySelectorAll(".session-card");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const filter = btn.dataset.filter;
+
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            sessions.forEach(session => {
+                if (filter === "all" || session.dataset.category === filter) {
+                    session.style.display = "flex";
+                } else {
+                    session.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* === Activity Filters === */
+    .activity-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+
+        margin-top: 3rem;     /* 👈 separación del componente superior */
+        margin-bottom: 3rem;  /* separación del contenido inferior */
+    }
+
+
+    .filter-btn {
+        background: var(--color-white);
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        padding: 0.6rem 1.5rem;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .filter-btn:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .filter-btn.active {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        border-color: transparent;
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+        .activity-filters {
+            gap: 0.75rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+        }
+    }
+</style>
