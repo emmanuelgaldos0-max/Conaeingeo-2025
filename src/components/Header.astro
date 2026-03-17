@@ -7,7 +7,7 @@
         <div class="logo">
             <a href="/">
                 <i class="fas fa-mountain"></i>
-                <span>CONAIGEO 2026</span>
+                <span>CONAEINGEO 2026</span>
             </a>
         </div>
 
@@ -20,9 +20,21 @@
         <nav class="nav-menu">
             <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/nosotros">Nosotros</a></li>
+                <li class="nav-item has-submenu">
+                    <a href="/nosotros" class="submenu-toggle">
+                        Nosotros <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="/nosotros#info">Acerca de</a></li>
+                        <li><a href="/nosotros#team">Sobre Nosotros</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="/actividades">Actividades</a></li>
                 <li><a href="/inscripciones">Inscripciones</a></li>
+                <li><a href="/plano">Plano</a></li>
+                <li><a href="/auspiciadores">Auspiciadores</a></li>
                 <li><a href="/contacto">Contacto</a></li>
             </ul>
             <a href="/inscripciones" class="btn btn-primary nav-cta"
@@ -87,7 +99,8 @@
     .header-container {
         max-width: 1280px;
         margin: 0 auto;
-        padding: 0 var(--spacing-md);
+        padding-left: 0.5rem;   /* antes var(--spacing-md) */
+        padding-right: 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -187,17 +200,14 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-        .nav-menu ul {
-            gap: 1.5rem;
-        }
-    }
-
-    @media (max-width: 768px) {
+        /* Mostrar botón hamburguesa */
         .mobile-toggle {
             display: flex;
         }
 
+        /* Ocultar menú horizontal */
         .nav-menu {
+            display: none;
             position: fixed;
             top: 0;
             right: -100%;
@@ -211,9 +221,12 @@
             gap: 2rem;
             transition: right var(--transition-normal);
             padding: 2rem;
+            z-index: 1000;
         }
 
+        /* Mostrar menú al hacer click */
         .nav-menu.active {
+            display: flex;
             right: 0;
         }
 
@@ -228,12 +241,66 @@
             color: var(--color-white);
         }
 
-        .nav-menu a:not(.btn)::after {
-            background: var(--color-primary-light);
-        }
-
         .nav-cta {
             margin-top: 1rem;
         }
+
+        /* Ajuste del logo */
+        .logo span {
+            font-size: 1.25rem;
+            white-space: nowrap;
+        }
     }
+
+
+
+
+
+    /* === Submenu básico === */
+    .has-submenu {
+        position: relative;
+    }
+
+    .submenu {
+        position: absolute;
+        top: 140%;
+        left: 0;
+        background: var(--color-white);
+        list-style: none;
+        min-width: 220px;
+        padding: 0.5rem 0;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all var(--transition-normal);
+        z-index: 1000;
+    }
+
+    .has-submenu:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .submenu li a {
+        display: block;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+        color: var(--color-text);
+    }
+
+    .submenu li a:hover {
+        background: var(--color-light);
+        color: var(--color-primary);
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* altura real de tu header */
+    }
+
+
 </style>

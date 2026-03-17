@@ -19,7 +19,31 @@ import Layout from "../layouts/Layout.astro";
         <div class="container">
             <div class="content-grid">
                 <div class="main-content">
-                    <h2>¿Qué es CONAIGEO?</h2>
+                    <h2 id="team">Nuestro Equipo Organizador</h2>
+                    <div class="team-row">
+                        <div class="team-card">
+                            <img src="public/organizers/speaker1.png" alt="Nombre Apellido" />
+                            <h4>Nombre Apellido</h4>
+                            <p>Presidente del Comité Organizador</p>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="public/organizers/speaker2.png" alt="Nombre Apellido" />
+                            <h4>Nombre Apellido</h4>
+                            <p>Coordinadora Académica</p>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="public/organizers/speaker3.png" alt="Nombre Apellido" />
+                            <h4>Nombre Apellido</h4>
+                            <p>Logística y Organización</p>
+                        </div>
+                    </div>                    
+
+
+
+
+                    <h2 id="info">¿Qué es CONAIGEO?</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed do eiusmod tempor incididunt ut labore et dolore
@@ -313,4 +337,26 @@ import Layout from "../layouts/Layout.astro";
             padding: 6rem 0 3rem;
         }
     }
+
+    .team-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* 👈 ESTO ES LO IMPORTANTE */
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .team-card {
+        flex: 1;
+        text-align: center;
+    }
+
+    .team-card img {
+        width: 200px;
+        height: 200px;           /* 👈 TODAS MISMO TAMAÑO */
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+    }
+
 </style>
