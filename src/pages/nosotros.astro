@@ -28,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
 
                         <div class="team-card">
-                            <img src="/organization/autoridades/Dr. Vilma Garcia Flores de Nieto. DECANA DE LA FACULTAD DE INGENIERIA GEOLOGICA, GEOFISICA Y MINAS.png" alt="Dra. Vilma Garcia Flores de Nieto" />
+                            <img class="portrait-top" src="/organization/autoridades/Dr. Vilma Garcia Flores de Nieto. DECANA DE LA FACULTAD DE INGENIERIA GEOLOGICA, GEOFISICA Y MINAS.png" alt="Dra. Vilma Garcia Flores de Nieto" />
                             <h4>Dra. Vilma Garcia Flores de Nieto</h4>
                             <p>Decana de la Facultad de Ingeniería Geológica, Geofísica y Minas</p>
                         </div>
@@ -398,9 +398,14 @@ import Layout from "../layouts/Layout.astro";
         width: 200px;
         height: 200px;
         object-fit: cover;
+        object-position: center;
         border-radius: 16px;
         margin-bottom: 1rem;
         box-shadow: var(--shadow-md);
+    }
+
+    .team-card img.portrait-top {
+        object-position: center top;
     }
 
     .team-card h4 {
