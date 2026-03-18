@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { activityDays } from "../data/activities";
 ---
 
 <Layout title="Inicio - CONAEINGEO 2026 | Congreso de Ingeniería Geológica Arequipa">
@@ -253,131 +254,21 @@ import Layout from "../layouts/Layout.astro";
 
 			</div>
 			<div class="schedule-timeline">
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">02</span>
-						<span class="month">AGO</span>
+				{activityDays.map((day) => (
+					<div class="timeline-item">
+						<div class="timeline-date">
+							<span class="day">{day.date.slice(0, 2)}</span>
+							<span class="month">{day.monthShort}</span>
+						</div>
+						<div class="timeline-content">
+							<h3>{`Día ${day.dayNumber}: ${day.title}`}</h3>
+							<p>{day.summary}</p>
+							<ul>
+								{day.bullets.map((bullet) => <li>{bullet}</li>)}
+							</ul>
+						</div>
 					</div>
-					<div class="timeline-content">
-						<h3>Domingo 02: Apertura Institucional</h3>
-						<p>
-							Inicio oficial del congreso con actividades protocolares y espacios de bienvenida para los participantes.
-						</p>
-						<ul>
-							<li>Ceremonia inaugural</li>
-							<li>Mesa redonda</li>
-							<li>Entrega de kit y actividad de bienvenida</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">03</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Lunes 03: Jornada Académica Magistral</h3>
-						<p>
-							Día enfocado en el intercambio académico y la participación estudiantil mediante espacios formativos y de integración.
-						</p>
-						<ul>
-							<li>Ponencias</li>
-							<li>Foros</li>
-							<li>Concurso de debate y actividad de integración</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">04</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Martes 04: Espacios de Análisis y Participación</h3>
-						<p>
-							Jornada orientada al análisis, la discusión y la participación activa en dinámicas académicas del congreso.
-						</p>
-						<ul>
-							<li>Ponencias</li>
-							<li>Mesa redonda</li>
-							<li>Concursos y actividad de integración</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">05</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Miércoles 05: Investigación y Formación Aplicada</h3>
-						<p>
-							Espacio dedicado a la presentación de trabajos, aprendizaje práctico y fortalecimiento de competencias académicas.
-						</p>
-						<ul>
-							<li>Exposición de investigaciones</li>
-							<li>Workshop</li>
-							<li>Concursos académicos</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">06</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Jueves 06: Actividades Técnicas</h3>
-						<p>
-							Experiencias fuera del aula orientadas a conectar la formación académica con escenarios reales de estudio y observación.
-						</p>
-						<ul>
-							<li>Actividades técnicas</li>
-							<li>Salidas técnicas</li>
-							<li>Salidas de campo</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">07</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Viernes 07: Actividades Técnicas Aplicadas</h3>
-						<p>
-							Continuación de las actividades prácticas con énfasis en observación, análisis y aprendizaje aplicado en campo.
-						</p>
-						<ul>
-							<li>Actividades técnicas aplicadas</li>
-							<li>Salidas técnicas</li>
-							<li>Salidas de campo</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-date">
-						<span class="day">08</span>
-						<span class="month">AGO</span>
-					</div>
-					<div class="timeline-content">
-						<h3>Sábado 08: Clausura Institucional</h3>
-						<p>
-							Cierre del congreso con reconocimiento a los participantes y actividades finales de despedida institucional.
-						</p>
-						<ul>
-							<li>Ceremonia de clausura</li>
-							<li>Premiación</li>
-							<li>Cierre oficial</li>
-						</ul>
-					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	</section>
