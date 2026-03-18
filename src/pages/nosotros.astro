@@ -19,8 +19,44 @@ import Layout from "../layouts/Layout.astro";
         <div class="container">
             <div class="content-grid">
                 <div class="main-content">
-                    <h2 id="team">Nuestro Equipo Organizador</h2>
-                    <div class="team-row">
+                    <h2 id="team">Nuestras Autoridades</h2>
+                    <div class="team-row authorities-row">
+                        <div class="team-card">
+                            <img src="/organization/autoridades/Dr. ANTENOR EDGARDO CHAVEZ VALENCIA.DIRECTOR DE LA ESCUELA PROFESIONAL DE INGENIERIA GEOLOGICA.png" alt="Dr. Antenor Edgardo Chavez Valencia" />
+                            <h4>Dr. Antenor Edgardo Chavez Valencia</h4>
+                            <p>Director de la Escuela Profesional de Ingeniería Geológica</p>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="/organization/autoridades/Dr. Vilma Garcia Flores de Nieto. DECANA DE LA FACULTAD DE INGENIERIA GEOLOGICA, GEOFISICA Y MINAS.png" alt="Dra. Vilma Garcia Flores de Nieto" />
+                            <h4>Dra. Vilma Garcia Flores de Nieto</h4>
+                            <p>Decana de la Facultad de Ingeniería Geológica, Geofísica y Minas</p>
+                        </div>
+                    </div>
+
+                    <h2>Nuestros Asesores</h2>
+                    <div class="team-row advisors-row">
+                        <div class="team-card">
+                            <img src="/organization/asesores/Dr. Edgar Roque Gutiérrez Salinas.png" alt="Dr. Edgar Roque Gutiérrez Salinas" />
+                            <h4>Dr. Edgar Roque Gutiérrez Salinas</h4>
+                            <p>Asesor</p>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="/organization/asesores/Dr. Renzo Galdós Postigo.png" alt="Dr. Renzo Galdós Postigo" />
+                            <h4>Dr. Renzo Galdós Postigo</h4>
+                            <p>Asesor</p>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="/organization/asesores/Dra. Madeleine Nathaly Guillén Gómez.png" alt="Dra. Madeleine Nathaly Guillén Gómez" />
+                            <h4>Dra. Madeleine Nathaly Guillén Gómez</h4>
+                            <p>Asesora</p>
+                        </div>
+                    </div>
+
+                    <h2>Nuestro Comité Organizador</h2>
+                    <div class="team-row organizers-row">
                         <div class="team-card">
                             <img src="/organizers/Hector Saul Llanos Soto. PRESIDENTE.jpg" alt="Hector Saul Llanos Soto" />
                             <h4>Hector Saul Llanos Soto</h4>
@@ -44,10 +80,7 @@ import Layout from "../layouts/Layout.astro";
                             <h4>Gonzales Lima Leon</h4>
                             <p>Secretario de Economía y Finanzas</p>
                         </div>
-                    </div>                    
-
-
-
+                    </div>
 
                     <h2 id="info">¿Qué es CONAEINGEO?</h2>
                     <p>
@@ -347,23 +380,35 @@ import Layout from "../layouts/Layout.astro";
 
     .team-row {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start; /* 👈 ESTO ES LO IMPORTANTE */
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 2rem;
         margin-top: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .team-card {
-        flex: 1;
+        flex: 1 1 220px;
+        max-width: 260px;
         text-align: center;
     }
 
     .team-card img {
         width: 200px;
-        height: 200px;           /* 👈 TODAS MISMO TAMAÑO */
+        height: 200px;
         object-fit: cover;
         border-radius: 16px;
         margin-bottom: 1rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    .team-card h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+        margin-bottom: 0;
     }
 
 </style>
