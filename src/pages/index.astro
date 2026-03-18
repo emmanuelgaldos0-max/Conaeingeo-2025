@@ -376,47 +376,35 @@ import Layout from "../layouts/Layout.astro";
 			<div class="sponsors-tier">
 				<h3>Auspiciadores Oro</h3>
 				<div class="sponsors-logos gold">
-					<div class="sponsor-placeholder">
-						<i class="fas fa-industry"></i>
-						<p>Auspiciador Oro 1</p>
-					</div>
-					<div class="sponsor-placeholder">
-						<i class="fas fa-industry"></i>
-						<p>Auspiciador Oro 2</p>
+					<div class="sponsor-placeholder empty-tier">
+						<i class="fas fa-award"></i>
+						<p>Espacio reservado para auspiciadores oro</p>
 					</div>
 				</div>
 			</div>
 			<div class="sponsors-tier">
 				<h3>Auspiciadores Plata</h3>
 				<div class="sponsors-logos silver">
-					<div class="sponsor-placeholder">
-						<i class="fas fa-tools"></i>
-						<p>Auspiciador Plata 1</p>
+					<div class="sponsor-logo-card">
+						<img src="/auspicios/plata/LOGO GEOMIN NORTH PERU.jpg" alt="GEOMIN NORTH PERU" />
+						<p>GEOMIN NORTH PERU</p>
 					</div>
-					<div class="sponsor-placeholder">
-						<i class="fas fa-tools"></i>
-						<p>Auspiciador Plata 2</p>
-					</div>
-					<div class="sponsor-placeholder">
-						<i class="fas fa-tools"></i>
-						<p>Auspiciador Plata 3</p>
+					<div class="sponsor-logo-card">
+						<img src="/auspicios/plata/LOGO GEOTITAN PRODUCTS.jpg" alt="GEOTITAN PRODUCTS" />
+						<p>GEOTITAN PRODUCTS</p>
 					</div>
 				</div>
 			</div>
 			<div class="sponsors-tier">
 				<h3>Auspiciadores Cobre</h3>
 				<div class="sponsors-logos copper">
-					<div class="sponsor-placeholder">
-						<i class="fas fa-hard-hat"></i>
-						<p>Auspiciador Cobre 1</p>
+					<div class="sponsor-logo-card">
+						<img src="/auspicios/cobre/LOGO GEOTEKH.jpg" alt="GEOTEKH" />
+						<p>GEOTEKH</p>
 					</div>
-					<div class="sponsor-placeholder">
-						<i class="fas fa-hard-hat"></i>
-						<p>Auspiciador Cobre 2</p>
-					</div>
-					<div class="sponsor-placeholder">
-						<i class="fas fa-hard-hat"></i>
-						<p>Auspiciador Cobre 3</p>
+					<div class="sponsor-logo-card">
+						<img src="/auspicios/cobre/LOGO MICHIGAN.jpg" alt="MICHIGAN" />
+						<p>MICHIGAN</p>
 					</div>
 				</div>
 			</div>
@@ -1075,19 +1063,25 @@ import Layout from "../layouts/Layout.astro";
 		gap: 2rem;
 	}
 
-	.sponsor-placeholder {
+	.sponsor-placeholder,
+	.sponsor-logo-card {
 		background: var(--color-light);
 		border: 2px dashed var(--color-text-light);
 		border-radius: var(--radius-lg);
-		padding: 2rem 3rem;
+		padding: 2rem 2rem;
 		text-align: center;
 		transition: all var(--transition-normal);
+	}
+
+	.sponsor-placeholder {
 		filter: grayscale(100%);
 	}
 
-	.sponsor-placeholder:hover {
+	.sponsor-placeholder:hover,
+	.sponsor-logo-card:hover {
 		filter: grayscale(0%);
 		border-color: var(--color-primary);
+		transform: translateY(-4px);
 	}
 
 	.sponsor-placeholder i {
@@ -1096,18 +1090,48 @@ import Layout from "../layouts/Layout.astro";
 		margin-bottom: 1rem;
 	}
 
-	.sponsor-placeholder p {
+	.sponsor-placeholder p,
+	.sponsor-logo-card p {
 		font-weight: 600;
 		margin: 0;
 		color: var(--color-text);
 	}
 
-	.sponsors-logos.gold .sponsor-placeholder {
-		min-width: 200px;
+	.sponsor-logo-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		min-width: 220px;
+		background: var(--color-white);
+		border-style: solid;
+		box-shadow: var(--shadow-sm);
 	}
 
-	.sponsors-logos.silver .sponsor-placeholder {
-		min-width: 150px;
+	.sponsor-logo-card img {
+		max-width: 180px;
+		max-height: 90px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		display: block;
+	}
+
+	.sponsors-logos.gold .sponsor-placeholder,
+	.sponsors-logos.gold .sponsor-logo-card {
+		min-width: 240px;
+	}
+
+	.sponsors-logos.silver .sponsor-placeholder,
+	.sponsors-logos.silver .sponsor-logo-card,
+	.sponsors-logos.copper .sponsor-logo-card {
+		min-width: 220px;
+	}
+
+	.empty-tier {
+		filter: none;
+		border-style: dashed;
 	}
 
 	/* Location Section */
