@@ -11,128 +11,60 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-
     <!-- FILTERS -->
     <div class="activity-filters">
         <button class="filter-btn active" data-filter="all">Todas</button>
         <button class="filter-btn" data-filter="magistrales">Ponencias Magistrales</button>
         <button class="filter-btn" data-filter="concursos">Concursos</button>
         <button class="filter-btn" data-filter="workshops">Workshops</button>
-        <button class="filter-btn" data-filter="tecnica">Visitas Tecnicas</button>
+        <button class="filter-btn" data-filter="tecnica">Visitas Técnicas</button>
         <button class="filter-btn" data-filter="campo">Salidas de campo</button>
     </div>
-
-
 
     <!-- Schedule Content -->
     <section class="section">
         <div class="container">
-
             <!-- Day 1 -->
             <div class="day-schedule">
                 <div class="day-header">
                     <div class="day-badge">
                         <span class="day-number">DÍA 1</span>
-                        <span class="day-date">15 de Septiembre</span>
+                        <span class="day-date">02 de Agosto</span>
                     </div>
-                    <h2>Inauguración y Conferencias Magistrales</h2>
+                    <h2>Apertura Institucional</h2>
                 </div>
 
                 <div class="sessions">
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>08:00 - 09:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Registro y Acreditación</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Hall Principal,
-                                UNSA
-                            </p>
-                            <p>
-                                Los participantes recibirán sus credenciales, material informativo y orientaciones generales para el desarrollo de las actividades académicas programadas durante el congreso.
-                            </p>
-                        </div>
-                    </div>
-
                     <div class="session-card highlight">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>09:00 - 10:00</span>
+                            <span>08:00 - 09:30</span>
                         </div>
                         <div class="session-content">
-                            <h3>Ceremonia de Inauguración</h3>
+                            <h3>Ceremonia Inaugural</h3>
                             <p class="session-location">
                                 <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Autoridades UNSA y Comité
-                                Organizador
-                            </p>
                             <p>
-                                Acto protocolar de apertura con palabras de bienvenida de las autoridades de la UNSA y la presentación oficial del XV CONAEINGEO – Arequipa 2026.
+                                Inicio oficial del XV CONAEINGEO – Arequipa 2026 con la participación de autoridades,
+                                comité organizador e invitados especiales.
                             </p>
                         </div>
                     </div>
 
-                    <div class="session-card highlight" data-category="magistrales">
+                    <div class="session-card" data-category="magistrales">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
                             <span>10:00 - 11:30</span>
                         </div>
                         <div class="session-content">
-                            <h3>
-                                Conferencia Magistral: Estado Actual de la
-                                Minería en Perú
-                            </h3>
+                            <h3>Mesa Redonda</h3>
                             <p class="session-location">
                                 <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Dr. Carlos Mendoza - Ingeniero
-                                de Minas Senior
-                            </p>
                             <p>
-                                Espacio orientado al análisis del contexto actual del sector minero en el Perú, sus principales desafíos y las oportunidades de innovación y desarrollo para los próximos años.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time" >
-                            <i class="fas fa-clock"></i>
-                            <span>11:30 - 12:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Coffee Break</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Área de Networking
-                            </p>
-                            <p>
-                                Espacio destinado al refrigerio, descanso e interacción entre participantes, ponentes y organizadores.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card" data-category="workshops">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>12:00 - 13:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>
-                                Panel: Desafíos de la Industria Minera Moderna
-                            </h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
-                            </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-users"></i> Panel de 5 expertos nacionales
-                                e internacionales
-                            </p>
-                            <p>
-                                Mesa de análisis sobre sostenibilidad, innovación tecnológica, regulación y perspectivas de desarrollo para la minería contemporánea.
+                                Espacio de diálogo institucional y académico para compartir perspectivas sobre el congreso,
+                                la formación geológica y los retos del sector.
                             </p>
                         </div>
                     </div>
@@ -140,12 +72,15 @@ import Layout from "../layouts/Layout.astro";
                     <div class="session-card">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>13:30 - 15:00</span>
+                            <span>12:00 - 13:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>Almuerzo</h3>
+                            <h3>Entrega de Kit</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
+                                <i class="fas fa-map-marker-alt"></i> Hall Principal
+                            </p>
+                            <p>
+                                Entrega de materiales, credenciales e indicaciones generales para los participantes del evento.
                             </p>
                         </div>
                     </div>
@@ -153,16 +88,15 @@ import Layout from "../layouts/Layout.astro";
                     <div class="session-card">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>15:00 - 17:00</span>
+                            <span>16:00 - 18:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>Sesiones Paralelas - Track A y B</h3>
+                            <h3>Actividad de Bienvenida</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Salas A y B
+                                <i class="fas fa-map-marker-alt"></i> Área de Integración
                             </p>
                             <p>
-                                <strong>Track A:</strong> Presentación de experiencias, estudios y casos aplicados en proyectos mineros y geológicos.<br />
-                                <strong>Track B:</strong> Exposición de herramientas, metodologías e innovaciones tecnológicas vinculadas a la exploración mineral.
+                                Encuentro de bienvenida para fortalecer el compañerismo, la integración y el inicio de la experiencia del congreso.
                             </p>
                         </div>
                     </div>
@@ -174,121 +108,73 @@ import Layout from "../layouts/Layout.astro";
                 <div class="day-header">
                     <div class="day-badge">
                         <span class="day-number">DÍA 2</span>
-                        <span class="day-date">16 de Septiembre</span>
+                        <span class="day-date">03 de Agosto</span>
                     </div>
-                    <h2>Innovación Tecnológica y Talleres</h2>
+                    <h2>Jornada Académica Magistral</h2>
                 </div>
 
                 <div class="sessions">
-                    <div class="session-card highlight">
+                    <div class="session-card highlight" data-category="magistrales">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
                             <span>09:00 - 11:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>
-                                Taller: Automatización en Minería Subterránea
-                            </h3>
+                            <h3>Ponencias Magistrales</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Laboratorio
-                                de Tecnología
-                            </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Ing. Roberto Silva - Especialista
-                                en Automatización
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
                             <p>
-                                Taller práctico enfocado en automatización, monitoreo y control de procesos aplicados al contexto minero y a la mejora de la eficiencia operativa.
-                            </p>
-                            <p class="session-note">
-                                <i class="fas fa-info-circle"></i> Cupos limitados
-                                - Requiere inscripción previa
+                                Exposiciones de especialistas invitados sobre temas de actualidad en geociencias,
+                                ingeniería geológica e innovación aplicada.
                             </p>
                         </div>
                     </div>
 
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>11:00 - 11:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Coffee Break</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Área de Networking
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card highlight">
+                    <div class="session-card" data-category="magistrales">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
                             <span>11:30 - 13:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>
-                                Conferencia: Inteligencia Artificial en
-                                Exploración Mineral
-                            </h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
-                            </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Dra. María Torres - Geóloga
-                                Especialista
-                            </p>
-                            <p>
-                                Conferencia orientada a mostrar aplicaciones de inteligencia artificial y aprendizaje automático en exploración geológica, análisis de datos y apoyo a la toma de decisiones.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>13:00 - 14:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Almuerzo</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>14:30 - 16:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>
-                                Showcase: Nuevas Tecnologías de Procesamiento
-                                Mineral
-                            </h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Sala de Exposiciones
-                            </p>
-                            <p>
-                                Espacio de exhibición y demostración de soluciones, equipos y metodologías vinculadas al procesamiento mineral y la innovación en la industria.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>16:30 - 18:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>
-                                Mesa Redonda: Transformación Digital en Minería
-                            </h3>
+                            <h3>Foros Académicos</h3>
                             <p class="session-location">
                                 <i class="fas fa-map-marker-alt"></i> Sala de Conferencias
                             </p>
                             <p>
-                                Conversatorio orientado a reflexionar sobre transformación digital, automatización, análisis de datos y su impacto en la cadena de valor minera.
+                                Espacios de análisis y debate sobre problemáticas, tendencias y oportunidades dentro de la ingeniería geológica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="concursos">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>15:00 - 16:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Concurso de Debate</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Aula Magna
+                            </p>
+                            <p>
+                                Dinámica académica orientada al análisis crítico, la argumentación y la participación estudiantil.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>17:00 - 18:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Actividad de Integración</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Área Social
+                            </p>
+                            <p>
+                                Espacio destinado a fomentar la convivencia, la interacción y el intercambio entre participantes.
                             </p>
                         </div>
                     </div>
@@ -300,103 +186,56 @@ import Layout from "../layouts/Layout.astro";
                 <div class="day-header">
                     <div class="day-badge">
                         <span class="day-number">DÍA 3</span>
-                        <span class="day-date">06 de Agosto</span>
+                        <span class="day-date">04 de Agosto</span>
                     </div>
-                    <h2>Sostenibilidad y Responsabilidad Ambiental</h2>
+                    <h2>Espacios de Análisis y Participación</h2>
                 </div>
 
                 <div class="sessions">
-                    <div class="session-card highlight">
+                    <div class="session-card highlight" data-category="magistrales">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
                             <span>09:00 - 11:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>Panel: Minería Verde y Economía Circular</h3>
+                            <h3>Ponencias Temáticas</h3>
                             <p class="session-location">
                                 <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-users"></i> Panel de expertos en
-                                sostenibilidad
+                            <p>
+                                Jornada de exposiciones enfocadas en temas específicos del congreso y áreas de interés para los asistentes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="magistrales">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 13:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Mesa Redonda</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Conferencias
                             </p>
                             <p>
-                                Diálogo especializado sobre sostenibilidad, economía circular, buenas prácticas ambientales y retos actuales para una minería responsable.
+                                Espacio de discusión abierta para profundizar en temas académicos y profesionales del evento.
                             </p>
                         </div>
                     </div>
 
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>11:00 - 11:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Coffee Break</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Área de Networking
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card highlight">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>11:30 - 13:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>
-                                Taller: Gestión de Recursos Hídricos en Minería
-                            </h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Sala de Talleres
-                            </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Ing. Ana Martínez - Especialista
-                                Ambiental
-                            </p>
-                            <p>
-                                Sesión técnica orientada a compartir criterios, estrategias y experiencias sobre gestión eficiente del recurso hídrico en actividades mineras.
-                            </p>
-                            <p class="session-note">
-                                <i class="fas fa-info-circle"></i> Incluye material
-                                de trabajo
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>13:30 - 15:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Almuerzo</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Comedor Universitario
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card highlight">
+                    <div class="session-card" data-category="concursos">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
                             <span>15:00 - 17:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>
-                                Conferencia: Relaciones Comunitarias y Licencia
-                                Social
-                            </h3>
+                            <h3>Concursos Académicos</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
-                            </p>
-                            <p class="session-speaker">
-                                <i class="fas fa-user"></i> Dr. Luis Fernández - Experto
-                                en Responsabilidad Social
+                                <i class="fas fa-map-marker-alt"></i> Ambientes Académicos
                             </p>
                             <p>
-                                Presentación sobre estrategias de relacionamiento comunitario, comunicación efectiva y construcción de confianza entre empresa, territorio y sociedad.
+                                Actividades competitivas que promueven creatividad, participación y aplicación de conocimientos.
                             </p>
                         </div>
                     </div>
@@ -404,15 +243,15 @@ import Layout from "../layouts/Layout.astro";
                     <div class="session-card">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>17:00 - 18:00</span>
+                            <span>17:30 - 18:30</span>
                         </div>
                         <div class="session-content">
-                            <h3>Sesión de Posters</h3>
+                            <h3>Actividad de Integración</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Hall de Exposiciones
+                                <i class="fas fa-map-marker-alt"></i> Área Social
                             </p>
                             <p>
-                                Espacio para la difusión de investigaciones, estudios de caso y proyectos académicos desarrollados por estudiantes y jóvenes investigadores.
+                                Continuación de los espacios de convivencia entre participantes, organizadores e invitados.
                             </p>
                         </div>
                     </div>
@@ -424,78 +263,167 @@ import Layout from "../layouts/Layout.astro";
                 <div class="day-header">
                     <div class="day-badge">
                         <span class="day-number">DÍA 4</span>
+                        <span class="day-date">05 de Agosto</span>
+                    </div>
+                    <h2>Investigación y Formación Aplicada</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card highlight" data-category="magistrales">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 11:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Exposición de Investigaciones</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Hall de Exposiciones
+                            </p>
+                            <p>
+                                Presentación de trabajos, estudios y proyectos desarrollados por estudiantes e investigadores.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight" data-category="workshops,magistrales">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 13:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Workshop Especializado</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Sala de Talleres
+                            </p>
+                            <p>
+                                Taller práctico orientado a fortalecer capacidades técnicas y aplicar conceptos de manera concreta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="concursos">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>15:00 - 17:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Concursos Académicos</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Ambientes Académicos
+                            </p>
+                            <p>
+                                Espacios de evaluación, creatividad y participación estudiantil vinculados al contenido del congreso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 5</span>
+                        <span class="day-date">06 de Agosto</span>
+                    </div>
+                    <h2>Actividades Técnicas</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card highlight" data-category="tecnica,campo">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>08:00 - 13:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Visitas Técnicas</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Punto de salida institucional
+                            </p>
+                            <p>
+                                Recorridos guiados para conocer espacios, procesos y escenarios vinculados al ejercicio profesional.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="campo,tecnica">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>14:30 - 18:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Salidas de Campo</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Zona de práctica
+                            </p>
+                            <p>
+                                Actividades orientadas a la observación, interpretación y análisis directo en terreno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 6</span>
+                        <span class="day-date">07 de Agosto</span>
+                    </div>
+                    <h2>Actividades Técnicas Aplicadas</h2>
+                </div>
+
+                <div class="sessions">
+                    <div class="session-card highlight" data-category="tecnica,campo">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>08:00 - 13:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Visitas Técnicas Aplicadas</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Punto de salida institucional
+                            </p>
+                            <p>
+                                Continuación de las experiencias técnicas para reforzar la formación aplicada de los participantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card" data-category="campo,tecnica">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>14:30 - 18:00</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Salidas de Campo Aplicadas</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Zona de práctica
+                            </p>
+                            <p>
+                                Actividades de observación y análisis con énfasis en la aplicación de conocimientos en campo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-badge">
+                        <span class="day-number">DÍA 7</span>
                         <span class="day-date">08 de Agosto</span>
                     </div>
-                    <h2>Networking y Clausura</h2>
+                    <h2>Clausura Institucional</h2>
                 </div>
 
                 <div class="sessions">
                     <div class="session-card">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>09:00 - 11:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Presentación de Casos de Éxito</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
-                            </p>
-                            <p>
-                                Presentación de experiencias destacadas, buenas prácticas y aprendizajes obtenidos en proyectos representativos del sector.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>11:00 - 11:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Coffee Break</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Área de Networking
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card highlight">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>11:30 - 13:00</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Sesión de Networking Empresarial</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Sala de Networking
-                            </p>
-                            <p>
-                                Espacio de articulación entre estudiantes, egresados, profesionales e instituciones para fortalecer redes de contacto y futuras colaboraciones.
-                            </p>
-                            <p class="session-note">
-                                <i class="fas fa-info-circle"></i> Incluye almuerzo
-                                de networking
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>13:00 - 14:30</span>
-                        </div>
-                        <div class="session-content">
-                            <h3>Almuerzo de Networking</h3>
-                            <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Salón de Eventos
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="session-card highlight">
-                        <div class="session-time">
-                            <i class="fas fa-clock"></i>
-                            <span>15:00 - 16:30</span>
+                            <span>10:00 - 11:30</span>
                         </div>
                         <div class="session-content">
                             <h3>Ceremonia de Clausura</h3>
@@ -503,7 +431,23 @@ import Layout from "../layouts/Layout.astro";
                                 <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
                             <p>
-                                Acto de cierre del congreso con balance general de actividades, reconocimientos a participantes y entrega simbólica de certificados.
+                                Cierre oficial del congreso con balance general de actividades y mensaje institucional de despedida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="session-card highlight" data-category="concursos">
+                        <div class="session-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11:30 - 12:30</span>
+                        </div>
+                        <div class="session-content">
+                            <h3>Premiación</h3>
+                            <p class="session-location">
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
+                            </p>
+                            <p>
+                                Reconocimiento a los ganadores de concursos y a las participaciones destacadas desarrolladas durante el evento.
                             </p>
                         </div>
                     </div>
@@ -511,15 +455,15 @@ import Layout from "../layouts/Layout.astro";
                     <div class="session-card">
                         <div class="session-time">
                             <i class="fas fa-clock"></i>
-                            <span>16:30 - 17:00</span>
+                            <span>12:30 - 13:00</span>
                         </div>
                         <div class="session-content">
-                            <h3>Brindis de Despedida</h3>
+                            <h3>Cierre Oficial</h3>
                             <p class="session-location">
-                                <i class="fas fa-map-marker-alt"></i> Área Social
+                                <i class="fas fa-map-marker-alt"></i> Auditorio Principal
                             </p>
                             <p>
-                                Momento final de confraternidad y despedida entre participantes, organizadores e invitados.
+                                Despedida institucional y cierre del XV CONAEINGEO – Arequipa 2026.
                             </p>
                         </div>
                     </div>
@@ -531,8 +475,7 @@ import Layout from "../layouts/Layout.astro";
                 <div class="card">
                     <h2>Descarga el Programa Completo</h2>
                     <p>
-                        Obtén el programa detallado en PDF con toda la
-                        información de ponentes, talleres y actividades.
+                        Obtén el programa detallado en PDF con toda la información del calendario académico, concursos y actividades del congreso.
                     </p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
@@ -760,7 +703,6 @@ import Layout from "../layouts/Layout.astro";
     }
 </style>
 
-
 </Layout>
 
 <script>
@@ -775,7 +717,13 @@ import Layout from "../layouts/Layout.astro";
             btn.classList.add("active");
 
             sessions.forEach(session => {
-                if (filter === "all" || session.dataset.category === filter) {
+                const rawCategories = session.dataset.category || "";
+                const categories = rawCategories
+                    .split(",")
+                    .map(item => item.trim())
+                    .filter(Boolean);
+
+                if (filter === "all" || categories.includes(filter)) {
                     session.style.display = "flex";
                 } else {
                     session.style.display = "none";
@@ -785,33 +733,15 @@ import Layout from "../layouts/Layout.astro";
     });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
-    /* === Activity Filters === */
     .activity-filters {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
-
-        margin-top: 3rem;     /* 👈 separación del componente superior */
-        margin-bottom: 3rem;  /* separación del contenido inferior */
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
-
 
     .filter-btn {
         background: var(--color-white);
@@ -840,7 +770,6 @@ import Layout from "../layouts/Layout.astro";
         box-shadow: var(--shadow-lg);
     }
 
-    /* === Responsive === */
     @media (max-width: 768px) {
         .activity-filters {
             gap: 0.75rem;
