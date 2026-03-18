@@ -36,6 +36,27 @@ import Layout from "../layouts/Layout.astro";
 						Conoce Más
 					</a>
 				</div>
+				<div class="countdown-wrapper fade-in-up">
+					<p class="countdown-label">Cuenta regresiva para el 2 de agosto de 2026</p>
+					<div class="countdown" id="countdown">
+						<div class="countdown-item">
+							<span id="countdown-days">--</span>
+							<small>Días</small>
+						</div>
+						<div class="countdown-item">
+							<span id="countdown-hours">--</span>
+							<small>Horas</small>
+						</div>
+						<div class="countdown-item">
+							<span id="countdown-minutes">--</span>
+							<small>Minutos</small>
+						</div>
+						<div class="countdown-item">
+							<span id="countdown-seconds">--</span>
+							<small>Segundos</small>
+						</div>
+					</div>
+				</div>
 				<div class="scroll-indicator">
 					<i class="fas fa-chevron-down"></i>
 				</div>
@@ -585,6 +606,60 @@ import Layout from "../layouts/Layout.astro";
 
 	.btn-large i {
 		margin-right: 0.5rem;
+	}
+
+	.countdown-wrapper {
+		margin-top: 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.countdown-label {
+		color: rgba(255, 255, 255, 0.92);
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+
+	.countdown {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(110px, 1fr));
+		gap: 1rem;
+		width: 100%;
+		max-width: 650px;
+	}
+
+	.countdown-item {
+		background: rgba(255, 255, 255, 0.12);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-radius: var(--radius-lg);
+		padding: 1.25rem 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.countdown-item span {
+		font-family: var(--font-heading);
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 900;
+		line-height: 1;
+		color: var(--color-white);
+	}
+
+	.countdown-item small {
+		margin-top: 0.5rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: rgba(255, 255, 255, 0.85);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
 	}
 
 	.scroll-indicator {
@@ -1210,6 +1285,15 @@ import Layout from "../layouts/Layout.astro";
 			grid-template-columns: 1fr;
 		}
 
+		.countdown {
+			grid-template-columns: repeat(2, minmax(120px, 1fr));
+			max-width: 420px;
+		}
+
+		.countdown-item {
+			padding: 1rem 0.75rem;
+		}
+
 		.speakers-grid {
 			grid-template-columns: 1fr;
 		}
@@ -1245,3 +1329,38 @@ import Layout from "../layouts/Layout.astro";
 		}
 	}
 </style>
+
+<script>
+	const targetDate = new Date("2026-08-02T00:00:00-05:00").getTime();
+
+	const daysEl = document.getElementById("countdown-days");
+	const hoursEl = document.getElementById("countdown-hours");
+	const minutesEl = document.getElementById("countdown-minutes");
+	const secondsEl = document.getElementById("countdown-seconds");
+
+	const updateCountdown = () => {
+		const now = new Date().getTime();
+		const diff = targetDate - now;
+
+		if (diff <= 0) {
+			if (daysEl) daysEl.textContent = "00";
+			if (hoursEl) hoursEl.textContent = "00";
+			if (minutesEl) minutesEl.textContent = "00";
+			if (secondsEl) secondsEl.textContent = "00";
+			return;
+		}
+
+		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+		const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+		const minutes = Math.floor((diff / (1000 * 60)) % 60);
+		const seconds = Math.floor((diff / 1000) % 60);
+
+		if (daysEl) daysEl.textContent = String(days).padStart(2, "0");
+		if (hoursEl) hoursEl.textContent = String(hours).padStart(2, "0");
+		if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, "0");
+		if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, "0");
+	};
+
+	updateCountdown();
+	setInterval(updateCountdown, 1000);
+</script>
