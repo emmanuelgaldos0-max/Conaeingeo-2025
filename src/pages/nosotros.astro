@@ -37,14 +37,8 @@ import Layout from "../layouts/Layout.astro";
                     <h2>Nuestros Asesores</h2>
                     <div class="team-row advisors-row">
                         <div class="team-card">
-                            <img src="/organization/asesores/Dr. Edgar Roque Gutiérrez Salinas.png" alt="Dr. Edgar Roque Gutiérrez Salinas" />
+                            <img class="portrait-top" src="/organization/asesores/Dr. Edgar Roque Gutiérrez Salinas.png" alt="Dr. Edgar Roque Gutiérrez Salinas" />
                             <h4>Dr. Edgar Roque Gutiérrez Salinas</h4>
-                            <p>Asesor</p>
-                        </div>
-
-                        <div class="team-card">
-                            <img src="/organization/asesores/Dr. Renzo Galdós Postigo.png" alt="Dr. Renzo Galdós Postigo" />
-                            <h4>Dr. Renzo Galdós Postigo</h4>
                             <p>Asesor</p>
                         </div>
 
@@ -53,18 +47,25 @@ import Layout from "../layouts/Layout.astro";
                             <h4>Dra. Madeleine Nathaly Guillén Gómez</h4>
                             <p>Asesora</p>
                         </div>
+
+                        <div class="team-card">
+                            <img src="/organization/asesores/Dr. Renzo Galdós Postigo.png" alt="Dr. Renzo Galdós Postigo" />
+                            <h4>Dr. Renzo Galdós Postigo</h4>
+                            <p>Asesor</p>
+                        </div>
+
                     </div>
 
                     <h2>Nuestro Comité Organizador</h2>
                     <div class="team-row organizers-row">
                         <div class="team-card">
-                            <img src="/organizers/Hector Saul Llanos Soto. PRESIDENTE.jpg" alt="Hector Saul Llanos Soto" />
+                            <img class="portrait-top" src="/organizers/Hector Saul Llanos Soto. PRESIDENTE.jpg" alt="Hector Saul Llanos Soto" />
                             <h4>Hector Saul Llanos Soto</h4>
                             <p>Presidente</p>
                         </div>
 
                         <div class="team-card">
-                            <img src="/organizers/OLENKA LUZ VEGA QUISPE 1. VICEPRESIDENTA.jpg" alt="OLENKA LUZ VEGA QUISPE" />
+                            <img class="portrait-top" src="/organizers/OLENKA LUZ VEGA QUISPE 1. VICEPRESIDENTA.jpg" alt="OLENKA LUZ VEGA QUISPE" />
                             <h4>OLENKA LUZ VEGA QUISPE</h4>
                             <p>Vicepresidenta</p>
                         </div>
@@ -76,7 +77,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
 
                         <div class="team-card">
-                            <img src="/organizers/Gonzales Lima, Leon.SECRETARIO DE ECONOMIA Y FINANZAS_.jpg" alt="Gonzales Lima Leon" />
+                            <img class="portrait-top" src="/organizers/Gonzales Lima, Leon.SECRETARIO DE ECONOMIA Y FINANZAS_.jpg" alt="Gonzales Lima Leon" />
                             <h4>Gonzales Lima Leon</h4>
                             <p>Secretario de Economía y Finanzas</p>
                         </div>
@@ -378,6 +379,7 @@ import Layout from "../layouts/Layout.astro";
         }
     }
 
+    /* ===== TEAM GENERAL ===== */
     .team-row {
         display: flex;
         justify-content: center;
@@ -414,6 +416,26 @@ import Layout from "../layouts/Layout.astro";
 
     .team-card p {
         margin-bottom: 0;
+    }
+
+    /* ===== SOLUCIÓN PARA ORGANIZADORES (2x2) ===== */
+    .organizers-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .organizers-row .team-card {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+        .organizers-row {
+            grid-template-columns: 1fr;
+        }
     }
 
 </style>
