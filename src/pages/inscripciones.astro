@@ -27,91 +27,98 @@ import Layout from "../layouts/Layout.astro";
                     </p>
 
                     <div class="pricing-cards">
-                        <div class="card pricing-card">
+                        <div class="card pricing-card pass-card chachani-card">
+                            <div class="pass-visual">
+                                <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" />
+                            </div>
                             <div class="card-header">
-                                <h3>Estudiante</h3>
-                                <div class="price">S/ 150</div>
+                                <h3>Descubre Pass Chachani</h3>
+                                <div class="price">S/ 140</div>
+                                <div class="price-note">Precio estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
-                                    <i class="fas fa-check"></i> Acceso a todas las
-                                    conferencias
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Material digital
-                                    del congreso
+                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
                                 </li>
                                 <li>
                                     <i class="fas fa-check"></i> Certificado de participación
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Coffee breaks
+                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Networking con profesionales
+                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica & Expo Empresarial
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-secondary">Inscribirse</a
-                            >
+                            <a href="#" class="btn btn-secondary">Inscribirse</a>
                         </div>
 
-                        <div class="card pricing-card featured">
+                        <div class="card pricing-card pass-card featured misti-card">
                             <div class="featured-badge">Recomendado</div>
+                            <div class="pass-visual">
+                                <img src="/entradas/misti.png" alt="Explora Pass Misti" />
+                            </div>
                             <div class="card-header">
-                                <h3>Profesional</h3>
-                                <div class="price">S/ 350</div>
+                                <h3>Explora Pass Misti</h3>
+                                <div class="price">S/ 200</div>
+                                <div class="price-note">Precio estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
-                                    <i class="fas fa-check"></i> Todo lo del paquete
-                                    Estudiante
+                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Acceso a talleres
-                                    especializados
+                                    <i class="fas fa-check"></i> Certificado de participación
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Almuerzo de networking
+                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Material físico del
-                                    congreso
+                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Certificado premium
+                                    <i class="fas fa-check"></i> Experiencia Andina – Full Day al Cañón del Colca
                                 </li>
                             </ul>
                             <a href="#" class="btn btn-primary">Inscribirse</a>
                         </div>
 
-                        <div class="card pricing-card">
+                        <div class="card pricing-card pass-card pichu-card">
+                            <div class="pass-visual">
+                                <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" />
+                            </div>
                             <div class="card-header">
-                                <h3>Corporativo</h3>
-                                <div class="price">S/ 2,500</div>
-                                <div class="price-note">5 personas</div>
+                                <h3>Experiencia Pass Pichu Pichu</h3>
+                                <div class="price">S/ 240</div>
+                                <div class="price-note">Precio estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
-                                    <i class="fas fa-check"></i> Todo lo del paquete
-                                    Profesional
+                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Logo en material
-                                    del evento
+                                    <i class="fas fa-check"></i> Certificado de participación
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Stand promocional
+                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Sesión de presentación
-                                    empresarial
+                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> Acceso VIP a áreas
-                                    exclusivas
+                                    <i class="fas fa-check"></i> Visita técnica a una unidad minera
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> City tour panorámico en mirabus por la ciudad de Arequipa
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-secondary">Contactar</a>
+                            <a href="#" class="btn btn-secondary">Inscribirse</a>
                         </div>
                     </div>
 
@@ -276,6 +283,7 @@ import Layout from "../layouts/Layout.astro";
         position: relative;
         text-align: center;
         transition: all var(--transition-normal);
+        overflow: hidden;
     }
 
     .pricing-card:hover {
@@ -286,6 +294,21 @@ import Layout from "../layouts/Layout.astro";
     .pricing-card.featured {
         border: 3px solid var(--color-primary);
         transform: scale(1.05);
+    }
+
+    .pass-visual {
+        height: 250px;
+        overflow: hidden;
+        background: var(--color-light);
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .pass-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
     }
 
     .featured-badge {
@@ -306,7 +329,19 @@ import Layout from "../layouts/Layout.astro";
         padding: 2rem;
         background: var(--gradient-primary);
         color: var(--color-white);
-        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        border-radius: 0;
+    }
+
+    .pass-card.chachani-card .card-header {
+        background: linear-gradient(135deg, #0f57c3 0%, #1d74e7 100%);
+    }
+
+    .pass-card.misti-card .card-header {
+        background: linear-gradient(135deg, #b9794c 0%, #c98b5d 100%);
+    }
+
+    .pass-card.pichu-card .card-header {
+        background: linear-gradient(135deg, #7c45f3 0%, #9a63ff 100%);
     }
 
     .card-header h3 {
@@ -456,6 +491,10 @@ import Layout from "../layouts/Layout.astro";
 
         .pricing-card.featured {
             transform: scale(1);
+        }
+
+        .pass-visual {
+            height: 220px;
         }
     }
 </style>
