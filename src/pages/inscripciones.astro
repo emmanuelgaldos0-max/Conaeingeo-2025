@@ -27,6 +27,32 @@ import Layout from "../layouts/Layout.astro";
                     </p>
 
                     <div class="pricing-cards">
+                        <div class="card pricing-card pass-card costo-card">
+                            <div class="pass-visual">
+                                <img src="/entradas/4.png" alt="Pass por confirmar" />
+                            </div>
+                            <div class="card-header">
+                                <h3>Pass por confirmar</h3>
+                                <div class="price">Próximamente</div>
+                                <div class="price-note">Precio estudiante por confirmar</div>
+                            </div>
+                            <ul class="benefits-list">
+                                <li>
+                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Certificado de participación
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Beneficios adicionales según la pieza promocional oficial
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary">Inscribirse</a>
+                        </div>
+
                         <div class="card pricing-card pass-card chachani-card">
                             <div class="pass-visual">
                                 <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" />
@@ -34,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
                             <div class="card-header">
                                 <h3>Descubre Pass Chachani</h3>
                                 <div class="price">S/ 140</div>
-                                <div class="price-note">Precio estudiante</div>
+                                <div class="price-note">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
@@ -64,7 +90,7 @@ import Layout from "../layouts/Layout.astro";
                             <div class="card-header">
                                 <h3>Explora Pass Misti</h3>
                                 <div class="price">S/ 200</div>
-                                <div class="price-note">Precio estudiante</div>
+                                <div class="price-note">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
@@ -93,7 +119,7 @@ import Layout from "../layouts/Layout.astro";
                             <div class="card-header">
                                 <h3>Experiencia Pass Pichu Pichu</h3>
                                 <div class="price">S/ 240</div>
-                                <div class="price-note">Precio estudiante</div>
+                                <div class="price-note">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
                                 <li>
@@ -112,7 +138,7 @@ import Layout from "../layouts/Layout.astro";
                                     <i class="fas fa-check"></i> Visita técnica a una unidad minera
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i> City tour panorámico en mirabus por la ciudad de Arequipa
+                                    <i class="fas fa-check"></i> City tour panorámico en Mirabus por la ciudad de Arequipa
                                 </li>
                                 <li>
                                     <i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados
@@ -297,7 +323,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .pass-visual {
-        height: 250px;
+        height: 220px;
         overflow: hidden;
         background: var(--color-light);
         border-radius: var(--radius-lg) var(--radius-lg) 0 0;
@@ -309,6 +335,7 @@ import Layout from "../layouts/Layout.astro";
         object-fit: cover;
         object-position: center top;
         display: block;
+        transform: scale(1.02);
     }
 
     .featured-badge {
@@ -330,6 +357,10 @@ import Layout from "../layouts/Layout.astro";
         background: var(--gradient-primary);
         color: var(--color-white);
         border-radius: 0;
+    }
+
+    .pass-card.costo-card .card-header {
+        background: linear-gradient(135deg, #475569 0%, #64748b 100%);
     }
 
     .pass-card.chachani-card .card-header {
