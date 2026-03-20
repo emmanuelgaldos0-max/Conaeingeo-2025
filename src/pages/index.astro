@@ -6,20 +6,39 @@ import { activityDays } from "../data/activities";
 <Layout title="Inicio - CONAEINGEO 2026 | Congreso de Ingeniería Geológica Arequipa">
 	<!-- Hero Section -->
 	<section class="hero" id="hero">
+		<div class="hero-slides">
+			<div class="hero-slide" style="background-image: url('/portada/1.jpg')"></div>
+			<div class="hero-slide" style="background-image: url('/portada/2.png')"></div>
+			<div class="hero-slide" style="background-image: url('/portada/3.png')"></div>
+		</div>
 		<div class="hero-overlay"></div>
 		<div class="hero-content">
 			<div class="container">
 				
-				<h1 class="hero-title fade-in-up">
+				<div class="hero-text-backdrop">
+			<h1 class="hero-title fade-in-up">
 					XV CONAEINGEO AREQUIPA 2026,<br />
-					<span class="gradient-text">CONTRUYENDO EL FUTURO DE LAS GEOCIENCIAS EN EL PERÚ</span>
+					<span class="gradient-text">CONSTRUYENDO EL FUTURO DE LAS GEOCIENCIAS EN EL PERÚ</span>
 				</h1>
 				<p class="hero-subtitle fade-in-up">
 					El principal encuentro académico de las geociencias en el Perú
 				</p>
-				<div class="hero-badge fade-in-up">
-					<i class="fas fa-calendar-alt"></i>
-					<span>02 - 08 de Agosto 2026</span>
+				</div>
+				<div class="hero-date fade-in-up">
+					<div class="hero-date-col">
+						<span class="date-num">02</span>
+						<span class="date-label">Agosto</span>
+					</div>
+					<div class="hero-date-sep">—</div>
+					<div class="hero-date-col">
+						<span class="date-num">08</span>
+						<span class="date-label">Agosto</span>
+					</div>
+					<div class="hero-date-sep">·</div>
+					<div class="hero-date-col">
+						<span class="date-num">2026</span>
+						<span class="date-label">Arequipa, Perú</span>
+					</div>
 				</div>
 				<div class="hero-cta fade-in-up">
 					<a href="/inscripciones" class="btn btn-primary btn-large">
@@ -125,12 +144,7 @@ import { activityDays } from "../data/activities";
 				</div>
 				<div class="about-image">
 				    <div class="image-card">
-				        <img src="/extras/contexto.png" alt="Contexto Minero" class="contexto-img" />
-				        <h4>Contexto Minero</h4>
-				        <p>
-				            Talleres prácticos y presentaciones de tecnologías
-				            emergentes
-				        </p>
+				        <img src="/portada/CONTEXTO MINERO.png" alt="Contexto Minero" class="contexto-img" />
 				    </div>
 				</div>
 			</div>
@@ -450,40 +464,103 @@ import { activityDays } from "../data/activities";
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background:
-			var(--gradient-hero),
-			url("/hero-bg.png") center/cover no-repeat;
 		color: var(--color-white);
 		overflow: hidden;
 	}
 
+	.hero-slides {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.hero-slide {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0;
+		animation: slideShow 18s infinite;
+	}
+
+	.hero-slide:nth-child(1) { animation-delay: 0s; }
+	.hero-slide:nth-child(2) { animation-delay: 6s; }
+	.hero-slide:nth-child(3) { animation-delay: 12s; }
+
+	@keyframes slideShow {
+		0%   { opacity: 0; }
+		5%   { opacity: 1; }
+		28%  { opacity: 1; }
+		33%  { opacity: 0; }
+		100% { opacity: 0; }
+	}
+
 	.hero-overlay {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: var(--gradient-overlay);
+		inset: 0;
+		z-index: 1;
+		background: linear-gradient(
+			to bottom,
+			rgba(15, 23, 42, 0.65) 0%,
+			rgba(15, 23, 42, 0.55) 50%,
+			rgba(15, 23, 42, 0.70) 100%
+		);
 	}
 
 	.hero-content {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		text-align: center;
 		padding: 8rem 0 4rem;
 	}
 
-	.hero-badge {
-		display: inline-flex;
+	.hero-text-backdrop {
+		background: rgba(10, 20, 50, 0.45);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		border-radius: 1.25rem;
+		padding: 2rem 2.5rem 1.5rem;
+		margin: 0 auto 2rem;
+		display: block;
+		max-width: 860px;
+	}
+
+	.hero-date {
+		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		background: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(10px);
-		padding: 0.75rem 1.5rem;
-		border-radius: var(--radius-full);
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		justify-content: center;
+		gap: 1.5rem;
 		margin-bottom: 2rem;
+	}
+
+	.hero-date-col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2rem;
+	}
+
+	.date-num {
+		font-size: clamp(1.75rem, 3vw, 2.5rem);
+		font-weight: 900;
+		color: var(--color-white);
+		line-height: 1;
+	}
+
+	.date-label {
+		font-size: 0.8rem;
 		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.65);
+	}
+
+	.hero-date-sep {
+		font-size: 1.5rem;
+		color: rgba(255, 255, 255, 0.35);
+		font-weight: 300;
+		margin-bottom: 1rem;
 	}
 
 	.hero-title {
@@ -660,11 +737,34 @@ import { activityDays } from "../data/activities";
 
 	.image-card {
 		background: var(--gradient-primary);
-		padding: var(--spacing-lg);
 		border-radius: var(--radius-lg);
 		text-align: center;
 		color: var(--color-white);
 		box-shadow: var(--shadow-xl);
+		overflow: hidden;
+	}
+
+	.contexto-img {
+		width: 100%;
+		height: 100%;
+		min-height: 350px;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+
+	.image-card h4 {
+		padding: 1.25rem var(--spacing-lg) 0.5rem;
+		color: var(--color-white);
+		font-size: 1.75rem;
+		margin-bottom: 0;
+	}
+
+	.image-card p {
+		padding: 0 var(--spacing-lg) 1.5rem;
+		color: rgba(255, 255, 255, 0.95);
+		font-size: 1rem;
+		margin: 0;
 	}
 
 	.icon-large {
@@ -673,16 +773,6 @@ import { activityDays } from "../data/activities";
 		opacity: 0.9;
 	}
 
-	.image-card h4 {
-		color: var(--color-white);
-		font-size: 1.75rem;
-		margin-bottom: 1rem;
-	}
-
-	.image-card p {
-		color: rgba(255, 255, 255, 0.95);
-		font-size: 1rem;
-	}
 
 	/* Speakers Section */
 	.speakers {
@@ -1324,4 +1414,3 @@ import { activityDays } from "../data/activities";
 	updateCountdown();
 	setInterval(updateCountdown, 1000);
 </script>
-pt>
