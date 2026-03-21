@@ -3,15 +3,13 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inscripciones - CONAEINGEO 2026">
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1>Inscripciones</h1>
-            <p>Únete al evento más importante de minería del sur del Perú</p>
+            <p>Únete al evento de geologia  más importante del Perú</p>
         </div>
     </section>
 
-    <!-- Registration Content -->
     <section class="section">
         <div class="container">
             <div class="content-wrapper">
@@ -26,223 +24,152 @@ import Layout from "../layouts/Layout.astro";
                         aprendizaje vinculadas a las geociencias.
                     </p>
 
+                    <!-- BOTONES -->
+                    <div class="toggle-user-type">
+                        <button id="btn-estudiante" class="toggle-btn active">Estudiante</button>
+                        <button id="btn-egresado" class="toggle-btn">Egresado</button>
+                    </div>
+
                     <div class="pricing-cards">
+                        <!-- COSTO -->
                         <div class="card pricing-card pass-card costo-card">
                             <div class="pass-visual">
                                 <img src="/entradas/4.png" alt="Pass por confirmar" />
                             </div>
                             <div class="card-header">
-                                
                                 <div class="price">Próximamente</div>
-                                <div class="price-note">Precio estudiante por confirmar</div>
+                                <div class="price-note" id="note-prox">Precio estudiante por confirmar</div>
                             </div>
                             <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Certificado de participación
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Beneficios adicionales según la pieza promocional oficial
-                                </li>
+                                <li><i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Certificado de participación</li>
+                                <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica</li>
+                                <li><i class="fas fa-check"></i> Beneficios adicionales según la pieza promocional oficial</li>
                             </ul>
                             <a href="#" class="btn btn-secondary">Inscribirse</a>
                         </div>
 
+                        <!-- CHACHANI -->
                         <div class="card pricing-card pass-card chachani-card">
                             <div class="pass-visual">
                                 <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" />
                             </div>
                             <div class="card-header">
-                                
-                                <div class="price">S/ 140</div>
-                                <div class="price-note">Tarifa estudiante</div>
+                                <div class="price" id="price-chachani">S/ 140</div>
+                                <div class="price-note" id="note-chachani">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Certificado de participación
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica & Expo Empresarial
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados
-                                </li>
+                                <li><i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Certificado de participación</li>
+                                <li><i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica & Expo Empresarial</li>
+                                <li><i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados</li>
                             </ul>
-                            <a href="#" class="btn btn-secondary">Inscribirse</a>
+
+                            <!-- BOTÓN CON LINK -->
+                            <a href="https://docs.google.com/forms/d/1vqjE0RsX_AcpabI8t0iistfftEeB1VB8q6q8Am91JSY/edit"
+                               target="_blank"
+                               class="btn btn-secondary btn-inscribete">
+                               Inscríbete
+                            </a>
                         </div>
 
-                        <!--
-                        <div class="card pricing-card pass-card featured misti-card">
-                            <div class="featured-badge">Recomendado</div>
-                            <div class="pass-visual">
-                                <img src="/entradas/misti.png" alt="Explora Pass Misti" />
-                            </div>
-                            <div class="card-header">
-                                
-                                <div class="price">S/ 200</div>
-                                <div class="price-note">Tarifa estudiante</div>
-                            </div>
-                            <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Certificado de participación
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Experiencia Andina – Full Day al Cañón del Colca
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Inscribirse</a>
-                        </div>
- -->
+                        <!-- PICHO PICHO -->
                         <div class="card pricing-card pass-card pichu-card">
                             <div class="pass-visual">
                                 <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" />
                             </div>
                             <div class="card-header">
-                                
-                                <div class="price">S/ 240</div>
-                                <div class="price-note">Tarifa estudiante</div>
+                                <div class="price" id="price-pichu">S/ 240</div>
+                                <div class="price-note" id="note-pichu">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Certificado de participación
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Acceso a la Feria Tecnológica
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Visita técnica a una unidad minera
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> City tour panorámico en Mirabus por la ciudad de Arequipa
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados
-                                </li>
+                                <li><i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Certificado de participación</li>
+                                <li><i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica</li>
+                                <li><i class="fas fa-check"></i> Visita técnica a una unidad minera</li>
+                                <li><i class="fas fa-check"></i> City tour panorámico en Mirabus por la ciudad de Arequipa</li>
+                                <li><i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados</li>
                             </ul>
-                            <a href="#" class="btn btn-secondary">Inscribirse</a>
+
+                            <!-- BOTÓN CON LINK -->
+                            <a href="https://docs.google.com/forms/d/1k0q8QTKf-6t96t4Or9VnhplKcYNugbZwaJXyXLgkT-M/edit"
+                               target="_blank"
+                               class="btn btn-secondary btn-inscribete">
+                               Inscríbete
+                            </a>
                         </div>
                     </div>
 
-                    <div class="info-section">
-                        <h2>Proceso de Inscripción</h2>
-                        <div class="steps-grid">
-                            <div class="step-card">
-                                <div class="step-number">1</div>
-                                <h3>Regístrate</h3>
-                                <p>
-                                    Selecciona tu categoría de participación. Una vez elegida, se habilitará el formulario de inscripción donde deberás completar tus datos personales y adjuntar tu constancia de matrícula vigente (en caso seas estudiante) junto con el comprobante de pago. Verifica cuidadosamente la información antes de enviar tu registro.
-                                </p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">2</div>
-                                <h3>Realiza el pago</h3>
-                                <p>
-                                    Efectúa el pago mediante los medios habilitados por la organización. Es importante conservar tu comprobante, ya que será necesario para completar y validar tu inscripción.
-                                </p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">3</div>
-                                <h3>Confirma tu asistencia</h3>
-                                <p>
-                                    Una vez enviado tu registro, el comité organizador verificará la información y los documentos adjuntos. Tras la validación, recibirás en tu correo electrónico la confirmación oficial de tu inscripción junto con los detalles para tu participación en el congreso.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- SCRIPT -->
+                    <script>
+                        const btnEst = document.getElementById("btn-estudiante");
+                        const btnEgr = document.getElementById("btn-egresado");
 
+                        const priceChachani = document.getElementById("price-chachani");
+                        const pricePichu = document.getElementById("price-pichu");
 
-                    <!-- Esta la seccion de inforamcion para el pago
-                    <div class="info-section">
-                        <h2>Información de Pago</h2>
-                        <div class="payment-info">
-                            <div class="payment-method">
-                                <h3>
-                                    <i class="fas fa-university"></i> Transferencia
-                                    Bancaria
-                                </h3>
-                                <p>
-                                    <strong>Banco:</strong> Banco de Cr dit del Perú
-                                    (BCP)
-                                </p>
-                                <p>
-                                    <strong>Cuenta Corriente:</strong> 1234-5678-9012-3456
-                                </p>
-                                <p>
-                                    <strong>CCI:</strong> 002-123-456789012345678
-                                </p>
-                                <p><strong>Titular:</strong> CONAEINGEO 2026</p>
-                            </div>
-                            <div class="payment-method">
-                                <h3>
-                                    <i class="fas fa-credit-card"></i> Pago en Línea
-                                </h3>
-                                <p>
-                                    Próximamente se habilitará una pasarela de pago
-                                    para facilitar el proceso de inscripción con
-                                    tarjetas de crédito y débito.
-                                </p>
-                                <p>
-                                    Mientras tanto, también puedes coordinar con la
-                                    organización para conocer los medios de pago
-                                    disponibles y el procedimiento vigente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    -->
+                        const noteChachani = document.getElementById("note-chachani");
+                        const notePichu = document.getElementById("note-pichu");
+                        const noteProx = document.getElementById("note-prox");
 
-                    <div class="info-section">
-                        <h2>Preguntas Frecuentes</h2>
-                        <div class="faq-list">
-                            <div class="faq-item">
-                                <h3>¿Ofrecen descuentos grupales?</h3>
-                                <p>
-                                    Sí, se ofrecerán descuentos para inscripciones en grupo.
-                                    No obstante, durante la fase de preventa no se aplicarán descuentos, ya que esta etapa cuenta con tarifas preferenciales. La información sobre los descuentos grupales será comunicada oficialmente una vez finalizada la preventa.
-                                </p>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <h3>¿Puedo cancelar mi inscripción?</h3>
-                                <p>
-                                    No. Los pagos realizados no son reembolsables, salvo en caso de cancelación total del evento.
-                                    Sin embargo, se permite la transferencia de la inscripción a otra persona dentro de los 3 días posteriores a haber realizado el pago.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
+                        btnEst.addEventListener("click", () => {
+                            priceChachani.textContent = "S/ 140";
+                            pricePichu.textContent = "S/ 240";
+
+                            noteChachani.textContent = "Tarifa estudiante";
+                            notePichu.textContent = "Tarifa estudiante";
+                            noteProx.textContent = "Precio estudiante por confirmar";
+
+                            btnEst.classList.add("active");
+                            btnEgr.classList.remove("active");
+                        });
+
+                        btnEgr.addEventListener("click", () => {
+                            priceChachani.textContent = "S/ 170";
+                            pricePichu.textContent = "S/ 270";
+
+                            noteChachani.textContent = "Tarifa egresado";
+                            notePichu.textContent = "Tarifa egresado";
+                            noteProx.textContent = "Precio egresado por confirmar";
+
+                            btnEgr.classList.add("active");
+                            btnEst.classList.remove("active");
+                        });
+                    </script>
+
+                    <style>
+                        .toggle-user-type {
+                            margin: 20px 0;
+                            display: flex;
+                            gap: 10px;
+                        }
+
+                        .toggle-btn {
+                            padding: 14px 28px;
+                            font-size: 16px;
+                            border: 2px solid #ccc;
+                            background: white;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-weight: 700;
+                            transition: 0.3s;
+                        }
+
+                        .toggle-btn.active {
+                            background: #1e3a8a;
+                            color: white;
+                            border-color: #1e3a8a;
+                        }
+                    </style>
+
                 </div>
             </div>
         </div>
     </section>
 </Layout>
+
 
 <style>
     .page-header {
@@ -263,6 +190,58 @@ import Layout from "../layouts/Layout.astro";
         color: rgba(255, 255, 255, 0.9);
         max-width: 600px;
         margin: 0 auto;
+    }
+
+    .toggle-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        background: white;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+
+    /* estructura del card */
+    .pricing-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* contenedor del botón */
+    .btn-container {
+        margin-top: auto;
+        padding: 20px;
+    }
+
+    /* botón visible siempre */
+    .btn-inscribete {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+        background: #1e3a8a;
+        color: white;
+        font-weight: 800;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    /* hover */
+    .btn-inscribete:hover {
+        transform: scale(1.05);
+        background: #162d6b;
+    }
+
+    /* 🔥 elimina cualquier ocultamiento global */
+    .pricing-card .btn,
+    .pricing-card:hover .btn {
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .content-wrapper {
@@ -306,7 +285,6 @@ import Layout from "../layouts/Layout.astro";
 
     .pass-visual {
         width: 100%;
-        /* Source assets are ~1080x680 (landscape), keep a matching ratio */
         aspect-ratio: 16 / 10;
         overflow: hidden;
         background: var(--color-light);
@@ -464,36 +442,6 @@ import Layout from "../layouts/Layout.astro";
         margin: 4rem 0;
     }
 
-    .payment-info {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .payment-method {
-        padding: 2rem;
-        background: var(--color-light);
-        border-radius: var(--radius-lg);
-        border-left: 4px solid var(--color-primary);
-    }
-
-    .payment-method h3 {
-        color: var(--color-primary);
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .payment-method p {
-        margin-bottom: 0.75rem;
-    }
-
-    .faq-list {
-        margin-top: 2rem;
-    }
-
     .faq-item {
         padding: 2rem;
         background: var(--color-white);
@@ -501,16 +449,6 @@ import Layout from "../layouts/Layout.astro";
         box-shadow: var(--shadow-md);
         margin-bottom: 1.5rem;
         border-left: 4px solid var(--color-primary);
-    }
-
-    .faq-item h3 {
-        color: var(--color-dark);
-        margin-bottom: 1rem;
-    }
-
-    .faq-item p {
-        line-height: 1.8;
-        color: var(--color-text-light);
     }
 
     @media (max-width: 768px) {
