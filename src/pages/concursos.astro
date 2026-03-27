@@ -64,22 +64,9 @@ const flyers = flyerFiles.map((file) => {
 
 <style>
     .concursos-hero {
-        position: relative;
         padding: 6rem 0 4rem;
-        background: linear-gradient(135deg, rgba(30, 58, 138, 0.94), rgba(249, 115, 22, 0.85));
+        background: var(--color-primary);
         color: var(--color-white);
-        overflow: hidden;
-    }
-
-    .concursos-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at 20% 20%, rgba(29, 78, 216, 0.45), transparent 40%),
-            radial-gradient(circle at 80% 30%, rgba(248, 113, 113, 0.35), transparent 35%),
-            rgba(15, 23, 42, 0.5);
-        mix-blend-mode: multiply;
-        z-index: 0;
     }
 
     .concursos-hero .container {
