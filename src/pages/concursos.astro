@@ -26,15 +26,15 @@ const flyers = flyerFiles.map((file) => {
 });
 ---
 
-<Layout title="Concuros - CONAEINGEO 2026">
-    <section class="page-header concuros-hero">
+<Layout title="Concursos - CONAEINGEO 2026">
+    <section class="page-header concursos-hero">
         <div class="container">
             <p class="eyebrow">Galería de concursos</p>
-            <h1>Concuros</h1>
+            <h1>Concursos</h1>
             <p class="lead">
-                Todos los flyers verticales que representan las competencias y demostraciones académicas
-                del congreso. Explora cada poster para evitar perderte los concursos que pondrán a prueba tu
-                creatividad geológica.
+                Cada poster resume el espíritu competitivo de los concursos oficiales del XV CONAEINGEO: cartografía, 
+                debate, reconocimiento geológico, fotografía, modelamiento y más. Usa esta galería para repasar el diseño 
+                visual, ubicaciones y fechas clave de las pruebas que pondrán a prueba tu conocimiento y creatividad.
             </p>
         </div>
     </section>
@@ -63,7 +63,7 @@ const flyers = flyerFiles.map((file) => {
 </Layout>
 
 <style>
-    .concuros-hero {
+    .concursos-hero {
         padding: 6rem 0 4rem;
         background: linear-gradient(135deg, rgba(30, 58, 138, 0.94), rgba(249, 115, 22, 0.85));
         color: var(--color-white);
@@ -99,15 +99,16 @@ const flyers = flyerFiles.map((file) => {
 
     .flyers-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin: 2rem auto 0;
+        max-width: 1200px;
     }
 
     .flyer-card {
         background: var(--color-white);
         border-radius: var(--radius-lg);
-        padding: 1rem;
+        padding: 1.25rem;
         box-shadow: var(--shadow-md);
         display: flex;
         flex-direction: column;
@@ -123,7 +124,7 @@ const flyers = flyerFiles.map((file) => {
 
     .flyer-frame {
         flex: 1;
-        min-height: 360px;
+        min-height: 420px;
         border-radius: var(--radius-md);
         overflow: hidden;
         background: var(--color-light);
@@ -135,7 +136,7 @@ const flyers = flyerFiles.map((file) => {
     .flyer-frame img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         display: block;
         transition: transform var(--transition-slow);
     }
