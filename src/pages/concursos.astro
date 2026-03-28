@@ -8,16 +8,37 @@ const flyerFiles = readdirSync(flyerDir)
     .filter((file) => /\.(png|jpe?g|webp|avif)$/i.test(file))
     .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
+const titleOverrides = {
+    "cartografiado geologico subterraneo": "Cartografiado Geológico Subterráneo",
+    "cartografiado geologico superficial": "Cartografiado Geológico Superficial",
+    "debate geologico": "Debate Geológico",
+    "elaboracion de columna estratigrafica y seccion geologica": "Elaboración de Columna Estratigráfica y Sección Geológica",
+    "fotointerpretacion geologica": "Fotointerpretación Geológica",
+    "geomecanica de rocas": "Geomecánica de Rocas",
+    "logueo geologico": "Logueo Geológico",
+    "reconocimiento paleontologico": "Reconocimiento Paleontológico",
+};
+
+const normalizeKey = (text: string) =>
+    text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/\p{Diacritic}/gu, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
 const flyers = flyerFiles.map((file) => {
     const name = basename(file, extname(file));
     const cleaned = name.replace(/[_]+/g, " ").replace(/\s+/g, " ").trim();
-    const pretty =
-        cleaned.length > 0
-            ? cleaned
-                  .split(" ")
-                  .map((word) => (word ? word[0].toUpperCase() + word.slice(1).toLowerCase() : ""))
-                  .join(" ")
-            : "Flyer";
+    const key = normalizeKey(cleaned);
+    const pretty = titleOverrides[key]
+        ? titleOverrides[key]
+        : cleaned.length > 0
+              ? cleaned
+                    .split(" ")
+                    .map((word) => (word ? word[0].toUpperCase() + word.slice(1).toLowerCase() : ""))
+                    .join(" ")
+              : "Flyer";
 
     return {
         title: pretty,
@@ -32,8 +53,7 @@ const flyers = flyerFiles.map((file) => {
             <p class="eyebrow">Galería de concursos</p>
             <p class="lead">
                 Únete al espíritu competitivo de los concursos oficiales del XV CONAEINGEO: cartografía, 
-                debate, reconocimiento geológico, fotografía, modelamiento y más. Usa esta galería para repasar el diseño 
-                visual, ubicaciones y fechas clave de las pruebas que pondrán a prueba tu conocimiento y creatividad.
+                debate, reconocimiento geológico, fotografía, modelamiento y más.
             </p>
         </div>
     </section>
