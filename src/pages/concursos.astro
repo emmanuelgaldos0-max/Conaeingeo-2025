@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { readdirSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { basename, extname } from "node:path";
 
 const flyerDir = new URL("../../public/Concursos", import.meta.url);
@@ -27,6 +27,34 @@ const normalizeKey = (text: string) =>
         .replace(/\s+/g, " ")
         .trim();
 
+const pdfDir = new URL("../../public/Concursos/PDFs", import.meta.url);
+const pdfFiles = existsSync(pdfDir)
+    ? readdirSync(pdfDir).filter((file) => /\.pdf$/i.test(file))
+    : [];
+const pdfEntries = pdfFiles.map((file) => {
+    const name = basename(file, extname(file));
+    const key = normalizeKey(name);
+    return {
+        key,
+        href: `/Concursos/PDFs/${encodeURI(file)}`,
+    };
+});
+
+const findPdfForKey = (flyerKey: string) => {
+    const exact = pdfEntries.find((entry) => entry.key === flyerKey);
+    if (exact) {
+        return exact.href;
+    }
+
+    const containsFlyer = pdfEntries.find((entry) => entry.key.includes(flyerKey));
+    if (containsFlyer) {
+        return containsFlyer.href;
+    }
+
+    const flyerContains = pdfEntries.find((entry) => flyerKey.includes(entry.key));
+    return flyerContains ? flyerContains.href : undefined;
+};
+
 const flyers = flyerFiles.map((file) => {
     const name = basename(file, extname(file));
     const cleaned = name.replace(/[_]+/g, " ").replace(/\s+/g, " ").trim();
@@ -41,8 +69,10 @@ const flyers = flyerFiles.map((file) => {
               : "Flyer";
 
     return {
+        key,
         title: pretty,
         src: `/Concursos/${encodeURI(file)}`,
+        pdfHref: findPdfForKey(key),
     };
 });
 ---
@@ -69,7 +99,19 @@ const flyers = flyerFiles.map((file) => {
                             </div>
                             <div class="flyer-meta">
                                 <h3>{flyer.title}</h3>
-                                <p>Detalles próximamente</p>
+                                {!flyer.pdfHref && <p>Detalles próximamente</p>}
+                                {flyer.pdfHref && (
+                                    <div class="flyer-actions">
+                                        <a
+                                            class="flyer-download-btn"
+                                            href={flyer.pdfHref}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Descarga las bases del concurso
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </article>
                     ))}
@@ -178,6 +220,31 @@ const flyers = flyerFiles.map((file) => {
         margin: 0;
         font-size: 0.9rem;
         color: var(--color-text-light);
+    }
+
+    .flyer-actions {
+        margin-top: 0.75rem;
+    }
+
+    .flyer-download-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1.2rem;
+        border-radius: var(--radius-md);
+        border: 2px solid var(--color-primary);
+        background: var(--color-primary);
+        color: var(--color-white);
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .flyer-download-btn:hover,
+    .flyer-download-btn:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
     }
 
     .empty-state {
