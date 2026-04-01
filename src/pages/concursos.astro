@@ -80,7 +80,7 @@ const flyers = flyerFiles.map((file) => {
 <Layout title="Concursos - CONAEINGEO 2026">
     <section class="page-header concursos-hero">
         <div class="container">
-            <p class="eyebrow">Galería de concursos</p>
+            <h1>Galería de concursos</h1>
             <p class="lead">
                 Únete al espíritu competitivo de los concursos oficiales del XV CONAEINGEO: cartografía, 
                 debate, reconocimiento geológico, fotografía, modelamiento y más.
@@ -139,6 +139,11 @@ const flyers = flyerFiles.map((file) => {
         max-width: 900px;
     }
 
+    .concursos-hero h1 {
+        color: var(--color-white);
+        margin-bottom: 1rem;
+    }
+
     .eyebrow {
         letter-spacing: 0.3em;
         text-transform: uppercase;
@@ -149,6 +154,7 @@ const flyers = flyerFiles.map((file) => {
 
     .concursos-hero .lead {
         font-size: 1.25rem;
+        line-height: 1.7;
         color: rgba(255, 255, 255, 0.9);
         max-width: 600px;
         margin: 0 auto;
