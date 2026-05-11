@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
     <section class="page-header">
         <div class="container">
             <h1>Inscripciones</h1>
-            <p>Únete al evento de geologia  más importante del Perú</p>
+            <p>Únete al evento de geología más importante del Perú</p>
         </div>
     </section>
 
@@ -31,31 +31,13 @@ import Layout from "../layouts/Layout.astro";
                     </div>
 
                     <div class="pricing-cards">
-                        <!-- COSTO -->
-                        <div class="card pricing-card pass-card costo-card">
-                            <div class="pass-visual">
-                                <img src="/entradas/4.png" alt="Pass por confirmar" />
-                            </div>
-                            <div class="card-header">
-                                <div class="price">Próximamente</div>
-                                <div class="price-note" id="note-prox">Precio estudiante por confirmar</div>
-                            </div>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO</li>
-                                <li><i class="fas fa-check"></i> Certificado de participación</li>
-                                <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica</li>
-                                <li><i class="fas fa-check"></i> Beneficios adicionales según la pieza promocional oficial</li>
-                            </ul>
-                            <a class="btn btn-secondary"></a>
-                        </div>
-
                         <!-- CHACHANI -->
                         <div class="card pricing-card pass-card chachani-card">
                             <div class="pass-visual">
-                                <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" />
+                                <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-chachani">S/ 140</div>
+                                <div class="price" id="price-chachani">S/ 150</div>
                                 <div class="price-note" id="note-chachani">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -63,24 +45,50 @@ import Layout from "../layouts/Layout.astro";
                                 <li><i class="fas fa-check"></i> Certificado de participación</li>
                                 <li><i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO</li>
                                 <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica & Expo Empresarial</li>
-                                <li><i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados</li>
                             </ul>
 
                             <!-- BOTÓN CON LINK -->
                             <a href="https://docs.google.com/forms/d/1vqjE0RsX_AcpabI8t0iistfftEeB1VB8q6q8Am91JSY/edit"
                                target="_blank"
+                               rel="noopener noreferrer"
                                class="btn btn-secondary btn-inscribete">
                                Inscríbete
                             </a>
                         </div>
 
-                        <!-- PICHO PICHO -->
-                        <div class="card pricing-card pass-card pichu-card">
+                        <!-- MISTI -->
+                        <div class="card pricing-card pass-card misti-card">
                             <div class="pass-visual">
-                                <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" />
+                                <img src="/entradas/misti.png" alt="Explora Pass Misti" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-pichu">S/ 240</div>
+                                <div class="price" id="price-misti">S/ 220</div>
+                                <div class="price-note" id="note-misti">Tarifa estudiante</div>
+                            </div>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check"></i> Acceso oficial al XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Certificado de participación</li>
+                                <li><i class="fas fa-check"></i> Explorer Kit XV CONAEINGEO</li>
+                                <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica</li>
+                                <li><i class="fas fa-check"></i> Experiencia Geo-andina / Full Day al Cañón del Colca</li>
+                            </ul>
+
+                            <!-- BOTÓN CON LINK -->
+                            <a href="https://forms.gle/ZCYR12qzU6wYngzA6"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-secondary btn-inscribete">
+                               Inscríbete
+                            </a>
+                        </div>
+
+                        <!-- PICHU PICHU -->
+                        <div class="card pricing-card pass-card pichu-card">
+                            <div class="pass-visual">
+                                <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" loading="lazy" decoding="async" />
+                            </div>
+                            <div class="card-header">
+                                <div class="price" id="price-pichu">S/ 250</div>
                                 <div class="price-note" id="note-pichu">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -90,12 +98,12 @@ import Layout from "../layouts/Layout.astro";
                                 <li><i class="fas fa-check"></i> Acceso a la Feria Tecnológica</li>
                                 <li><i class="fas fa-check"></i> Visita técnica a una unidad minera</li>
                                 <li><i class="fas fa-check"></i> City tour panorámico en Mirabus por la ciudad de Arequipa</li>
-                                <li><i class="fas fa-check"></i> 50% de descuento en cursos electivos especializados</li>
                             </ul>
 
                             <!-- BOTÓN CON LINK -->
                             <a href="https://docs.google.com/forms/d/1k0q8QTKf-6t96t4Or9VnhplKcYNugbZwaJXyXLgkT-M/edit"
                                target="_blank"
+                               rel="noopener noreferrer"
                                class="btn btn-secondary btn-inscribete">
                                Inscríbete
                             </a>
@@ -108,35 +116,31 @@ import Layout from "../layouts/Layout.astro";
                         const btnEgr = document.getElementById("btn-egresado");
 
                         const priceChachani = document.getElementById("price-chachani");
+                        const priceMisti = document.getElementById("price-misti");
                         const pricePichu = document.getElementById("price-pichu");
 
                         const noteChachani = document.getElementById("note-chachani");
+                        const noteMisti = document.getElementById("note-misti");
                         const notePichu = document.getElementById("note-pichu");
-                        const noteProx = document.getElementById("note-prox");
 
-                        btnEst.addEventListener("click", () => {
-                            priceChachani.textContent = "S/ 140";
-                            pricePichu.textContent = "S/ 240";
+                        const setMode = (mode: "estudiante" | "egresado") => {
+                            const isStudent = mode === "estudiante";
+                            const noteLabel = isStudent ? "Tarifa estudiante" : "Tarifa egresado";
 
-                            noteChachani.textContent = "Tarifa estudiante";
-                            notePichu.textContent = "Tarifa estudiante";
-                            noteProx.textContent = "Precio estudiante por confirmar";
+                            if (priceChachani) priceChachani.textContent = isStudent ? "S/ 150" : "S/ 180";
+                            if (priceMisti) priceMisti.textContent = isStudent ? "S/ 220" : "S/ 240";
+                            if (pricePichu) pricePichu.textContent = isStudent ? "S/ 250" : "S/ 280";
 
-                            btnEst.classList.add("active");
-                            btnEgr.classList.remove("active");
-                        });
+                            if (noteChachani) noteChachani.textContent = noteLabel;
+                            if (noteMisti) noteMisti.textContent = noteLabel;
+                            if (notePichu) notePichu.textContent = noteLabel;
 
-                        btnEgr.addEventListener("click", () => {
-                            priceChachani.textContent = "S/ 170";
-                            pricePichu.textContent = "S/ 270";
+                            btnEst?.classList.toggle("active", isStudent);
+                            btnEgr?.classList.toggle("active", !isStudent);
+                        };
 
-                            noteChachani.textContent = "Tarifa egresado";
-                            notePichu.textContent = "Tarifa egresado";
-                            noteProx.textContent = "Precio egresado por confirmar";
-
-                            btnEgr.classList.add("active");
-                            btnEst.classList.remove("active");
-                        });
+                        btnEst?.addEventListener("click", () => setMode("estudiante"));
+                        btnEgr?.addEventListener("click", () => setMode("egresado"));
                     </script>
 
                     <style>
@@ -321,14 +325,6 @@ import Layout from "../layouts/Layout.astro";
         border-radius: 0;
     }
 
-    .pass-card.costo-card .card-header {
-        background: linear-gradient(135deg, #475569 0%, #64748b 100%);
-    }
-
-    .pass-card.costo-card {
-        order: 2;
-    }
-
     .pass-card.chachani-card .card-header {
         background: linear-gradient(135deg, #0f57c3 0%, #1d74e7 100%);
     }
@@ -341,18 +337,16 @@ import Layout from "../layouts/Layout.astro";
         background: linear-gradient(135deg, #b9794c 0%, #c98b5d 100%);
     }
 
+    .pass-card.misti-card {
+        order: 2;
+    }
+
     .pass-card.pichu-card .card-header {
         background: linear-gradient(135deg, #7c45f3 0%, #9a63ff 100%);
     }
 
     .pass-card.pichu-card {
         order: 3;
-    }
-
-    .pass-card.costo-card .price {
-        font-size: clamp(1.6rem, 6.2vw, 2.2rem);
-        line-height: 1.15;
-        overflow-wrap: anywhere;
     }
 
     .card-header h3 {

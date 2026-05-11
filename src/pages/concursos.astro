@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { existsSync, readdirSync } from "node:fs";
+import { readdirSync } from "node:fs";
 import { basename, extname } from "node:path";
 
 const flyerDir = new URL("../../public/Concursos", import.meta.url);
@@ -8,15 +8,35 @@ const flyerFiles = readdirSync(flyerDir)
     .filter((file) => /\.(png|jpe?g|webp|avif)$/i.test(file))
     .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
-const titleOverrides = {
+const titleOverrides: Record<string, string> = {
     "cartografiado geologico subterraneo": "Cartografiado Geológico Subterráneo",
     "cartografiado geologico superficial": "Cartografiado Geológico Superficial",
     "debate geologico": "Debate Geológico",
     "elaboracion de columna estratigrafica y seccion geologica": "Elaboración de Columna Estratigráfica y Sección Geológica",
     "fotointerpretacion geologica": "Fotointerpretación Geológica",
+    "fotografia geologica": "Fotografía Geológica",
     "geomecanica de rocas": "Geomecánica de Rocas",
     "logueo geologico": "Logueo Geológico",
+    "modelamiento y estimacion de recursos naturales": "Modelamiento y Estimación de Recursos Minerales",
     "reconocimiento paleontologico": "Reconocimiento Paleontológico",
+    "trivia geologica": "Trivia Geológica",
+};
+
+// Map flyer key -> PDF filename inside /public/Concursos/PDFs
+const pdfMap: Record<string, string> = {
+    "cartografiado geologico subterraneo": "Brochure del Concurso de Cartografiado Geológico Subterráneo.pdf",
+    "cartografiado geologico superficial": "Brochure del Concurso de Cartografiado geológico superficial.pdf",
+    "debate geologico": "Brochure del Concurso de Debate Geológico.pdf",
+    "elaboracion de columna estratigrafica y seccion geologica": "Brochure del Concurso de Levantamiento de Columna Estratigráfica.pdf",
+    "fotografia geologica": "Brochure del Concurso de Fotografía geológica.pdf",
+    "fotointerpretacion geologica": "Brochure del Concurso de Fotointerpretación.pdf",
+    "geomecanica de rocas": "Brochure del Concurso de Geomecánica de rocas.pdf",
+    "logueo geologico": "Brochure del Concurso de Logueo Geológico.pdf",
+    "modelamiento y estimacion de recursos naturales": "Brochure del Concurso de Modelamiento y estimación de recursos minerales.pdf",
+    "reconocimiento de minerales": "Brochure del Concurso Reconocimiento de Minerales.pdf",
+    "reconocimiento de rocas": "Brochure del Concurso de Reconocimiento de Rocas.pdf",
+    "reconocimiento paleontologico": "Brochure del Concurso de Reconocimiento Paleontológico.pdf",
+    "trivia geologica": "Brochure del Concurso de Trivia Geológica.pdf",
 };
 
 const normalizeKey = (text: string) =>
@@ -26,34 +46,6 @@ const normalizeKey = (text: string) =>
         .replace(/\p{Diacritic}/gu, "")
         .replace(/\s+/g, " ")
         .trim();
-
-const pdfDir = new URL("../../public/Concursos/PDFs", import.meta.url);
-const pdfFiles = existsSync(pdfDir)
-    ? readdirSync(pdfDir).filter((file) => /\.pdf$/i.test(file))
-    : [];
-const pdfEntries = pdfFiles.map((file) => {
-    const name = basename(file, extname(file));
-    const key = normalizeKey(name);
-    return {
-        key,
-        href: `/Concursos/PDFs/${encodeURI(file)}`,
-    };
-});
-
-const findPdfForKey = (flyerKey: string) => {
-    const exact = pdfEntries.find((entry) => entry.key === flyerKey);
-    if (exact) {
-        return exact.href;
-    }
-
-    const containsFlyer = pdfEntries.find((entry) => entry.key.includes(flyerKey));
-    if (containsFlyer) {
-        return containsFlyer.href;
-    }
-
-    const flyerContains = pdfEntries.find((entry) => flyerKey.includes(entry.key));
-    return flyerContains ? flyerContains.href : undefined;
-};
 
 const flyers = flyerFiles.map((file) => {
     const name = basename(file, extname(file));
@@ -68,11 +60,12 @@ const flyers = flyerFiles.map((file) => {
                     .join(" ")
               : "Flyer";
 
+    const pdfFile = pdfMap[key];
     return {
         key,
         title: pretty,
         src: `/Concursos/${encodeURI(file)}`,
-        pdfHref: findPdfForKey(key),
+        pdfHref: pdfFile ? `/Concursos/PDFs/${encodeURI(pdfFile)}` : undefined,
     };
 });
 ---
@@ -95,7 +88,7 @@ const flyers = flyerFiles.map((file) => {
                     {flyers.map((flyer) => (
                         <article class="flyer-card">
                             <div class="flyer-frame">
-                                <img src={flyer.src} alt={`Flyer ${flyer.title}`} loading="lazy" />
+                                <img src={flyer.src} alt={`Flyer ${flyer.title}`} loading="lazy" decoding="async" />
                             </div>
                             <div class="flyer-meta">
                                 <h3>{flyer.title}</h3>

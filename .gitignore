@@ -42,3 +42,6 @@ Thumbs.db
 # Testing
 coverage/
 .nyc_output/
+
+# Client-provided source assets (not for production)
+Actualizacion/
