@@ -37,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
                                 <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-chachani">S/ 140</div>
+                                <div class="price" id="price-chachani">S/ 160</div>
                                 <div class="price-note" id="note-chachani">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
                                 <img src="/entradas/misti.png" alt="Explora Pass Misti" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-misti">S/ 210</div>
+                                <div class="price" id="price-misti">S/ 230</div>
                                 <div class="price-note" id="note-misti">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -89,7 +89,7 @@ import Layout from "../layouts/Layout.astro";
                                 <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-pichu">S/ 240</div>
+                                <div class="price" id="price-pichu">S/ 260</div>
                                 <div class="price-note" id="note-pichu">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -125,9 +125,9 @@ import Layout from "../layouts/Layout.astro";
                             const isStudent = mode === "estudiante";
                             const noteLabel = isStudent ? "Tarifa estudiante" : "Tarifa egresado";
 
-                            if (priceChachani) priceChachani.textContent = isStudent ? "S/ 140" : "S/ 170";
-                            if (priceMisti) priceMisti.textContent = isStudent ? "S/ 210" : "S/ 230";
-                            if (pricePichu) pricePichu.textContent = isStudent ? "S/ 240" : "S/ 270";
+                            if (priceChachani) priceChachani.textContent = isStudent ? "S/ 160" : "S/ 190";
+                            if (priceMisti) priceMisti.textContent = isStudent ? "S/ 230" : "S/ 250";
+                            if (pricePichu) pricePichu.textContent = isStudent ? "S/ 260" : "S/ 290";
 
                             if (noteChachani) noteChachani.textContent = noteLabel;
                             if (noteMisti) noteMisti.textContent = noteLabel;
