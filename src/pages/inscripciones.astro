@@ -37,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
                                 <img src="/entradas/Chachani.png" alt="Descubre Pass Chachani" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-chachani">S/ 150</div>
+                                <div class="price" id="price-chachani">S/ 140</div>
                                 <div class="price-note" id="note-chachani">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
                                 <img src="/entradas/misti.png" alt="Explora Pass Misti" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-misti">S/ 220</div>
+                                <div class="price" id="price-misti">S/ 210</div>
                                 <div class="price-note" id="note-misti">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -83,12 +83,13 @@ import Layout from "../layouts/Layout.astro";
                         </div>
 
                         <!-- PICHU PICHU -->
-                        <div class="card pricing-card pass-card pichu-card">
+                        <div class="card pricing-card pass-card pichu-card sold-out">
+                            <div class="sold-out-badge">Agotado</div>
                             <div class="pass-visual">
                                 <img src="/entradas/pichu pichu.png" alt="Experiencia Pass Pichu Pichu" loading="lazy" decoding="async" />
                             </div>
                             <div class="card-header">
-                                <div class="price" id="price-pichu">S/ 250</div>
+                                <div class="price" id="price-pichu">S/ 240</div>
                                 <div class="price-note" id="note-pichu">Tarifa estudiante</div>
                             </div>
                             <ul class="benefits-list">
@@ -100,13 +101,10 @@ import Layout from "../layouts/Layout.astro";
                                 <li><i class="fas fa-check"></i> City tour panorámico en Mirabus por la ciudad de Arequipa</li>
                             </ul>
 
-                            <!-- BOTÓN CON LINK -->
-                            <a href="https://docs.google.com/forms/d/1k0q8QTKf-6t96t4Or9VnhplKcYNugbZwaJXyXLgkT-M/edit"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="btn btn-secondary btn-inscribete">
-                               Inscríbete
-                            </a>
+                            <!-- BOTÓN AGOTADO -->
+                            <span class="btn btn-secondary btn-inscribete btn-agotado" aria-disabled="true">
+                               Agotado
+                            </span>
                         </div>
                     </div>
 
@@ -127,9 +125,9 @@ import Layout from "../layouts/Layout.astro";
                             const isStudent = mode === "estudiante";
                             const noteLabel = isStudent ? "Tarifa estudiante" : "Tarifa egresado";
 
-                            if (priceChachani) priceChachani.textContent = isStudent ? "S/ 150" : "S/ 180";
-                            if (priceMisti) priceMisti.textContent = isStudent ? "S/ 220" : "S/ 240";
-                            if (pricePichu) pricePichu.textContent = isStudent ? "S/ 250" : "S/ 280";
+                            if (priceChachani) priceChachani.textContent = isStudent ? "S/ 140" : "S/ 170";
+                            if (priceMisti) priceMisti.textContent = isStudent ? "S/ 210" : "S/ 230";
+                            if (pricePichu) pricePichu.textContent = isStudent ? "S/ 240" : "S/ 270";
 
                             if (noteChachani) noteChachani.textContent = noteLabel;
                             if (noteMisti) noteMisti.textContent = noteLabel;
@@ -347,6 +345,47 @@ import Layout from "../layouts/Layout.astro";
 
     .pass-card.pichu-card {
         order: 3;
+    }
+
+    /* estado agotado */
+    .pricing-card.sold-out {
+        opacity: 0.85;
+    }
+
+    .pricing-card.sold-out .pass-visual img {
+        filter: grayscale(70%);
+    }
+
+    .pricing-card.sold-out:hover {
+        transform: none;
+        box-shadow: var(--shadow-md);
+    }
+
+    .sold-out-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 2;
+        background: #dc2626;
+        color: var(--color-white);
+        padding: 0.4rem 1.25rem;
+        border-radius: var(--radius-full);
+        font-weight: 800;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        box-shadow: var(--shadow-md);
+    }
+
+    .btn-agotado {
+        background: #9ca3af !important;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .btn-agotado:hover {
+        transform: none !important;
+        background: #9ca3af !important;
     }
 
     .card-header h3 {
